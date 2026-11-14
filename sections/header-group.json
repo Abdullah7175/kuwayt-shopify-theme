@@ -14,31 +14,62 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
-        "announcement_BxgCk9": {
+        "announcement_brand": {
           "type": "_announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "KUWAYT — One stop for all",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
+            "weight": "600",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "text_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "announcement_departments": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Electronics, fashion, home, beauty, fitness and everyday essentials",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "600",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "text_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "announcement_search": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Search the catalog or browse a department",
+            "link": "shopify://collections/all",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "600",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "text_color": "#ffffff"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announcement_brand",
+        "announcement_departments",
+        "announcement_search"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
-        "section_width": "page-width",
-        "divider_width": 1,
-        "padding-block-start": 15,
-        "padding-block-end": 15,
-        "divider_color": "{{ settings.color_palette.color3 }}"
+        "section_width": "full-width",
+        "background_color": "#009EAA",
+        "divider_width": 0,
+        "padding-block-start": 8,
+        "padding-block-end": 8
       }
     },
     "header_section": {
@@ -63,14 +94,14 @@
             "menu_font_style": "inverse",
             "type_font_primary_link": "body",
             "type_case_primary_link": "none",
-            "menu_style": "featured_products",
-            "featured_products_aspect_ratio": "4 / 5",
-            "featured_collections_aspect_ratio": "16 / 9",
-            "image_border_radius": 0,
+            "menu_style": "collection_images",
+            "featured_products_aspect_ratio": "1 / 1",
+            "featured_collections_aspect_ratio": "1 / 1",
+            "image_border_radius": 8,
             "navigation_bar": false,
-            "drawer_accordion": false,
+            "drawer_accordion": true,
             "drawer_accordion_expand_first": false,
-            "drawer_dividers": false
+            "drawer_dividers": true
           },
           "blocks": {}
         }
@@ -78,9 +109,9 @@
       "settings": {
         "logo_position": "left",
         "menu_position": "left",
-        "menu_row": "top",
+        "menu_row": "bottom",
         "show_search": true,
-        "search_position": "right",
+        "search_position": "center",
         "search_row": "top",
         "show_country": true,
         "country_selector_style": false,
@@ -88,13 +119,22 @@
         "localization_font": "heading",
         "localization_font_size": "0.875rem",
         "localization_position": "right",
-        "localization_row": "top",
+        "localization_row": "bottom",
         "section_width": "page-width",
         "section_height": "standard",
         "enable_sticky_header": "always",
-        "divider_width": 0,
-        "divider_size": "page-width",
+        "divider_width": 1,
+        "divider_size": "full-width",
+        "divider_color": "#E4E7EA",
         "border_width": 0,
+        "background_color_top": "#FFFFFF",
+        "text_color_top": "#202124",
+        "background_color_bottom": "#F6F7F8",
+        "text_color_bottom": "#202124",
+        "bubble_style": "custom",
+        "bubble_background_color": "#009EAA",
+        "bubble_text_color": "#FFFFFF",
+        "actions_display_style": "icon",
         "enable_transparent_header_home": false,
         "enable_transparent_header_product": false,
         "enable_transparent_header_collection": false

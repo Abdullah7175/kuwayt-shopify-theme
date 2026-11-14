@@ -1,0 +1,260 @@
+<div
+  class="kuwayt-promos"
+  style="--kuwayt-promos-pad: {{ section.settings.padding }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="section section--page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="kuwayt-promos__heading">{{ section.settings.heading | escape }}</h2>
+    {% endif %}
+
+    <div class="kuwayt-promos__grid">
+      {% for block in section.blocks %}
+        {% liquid
+          assign promo_title = block.settings.title
+          assign promo_url = block.settings.link
+          if promo_url == blank and block.settings.collection != blank
+            assign promo_url = block.settings.collection.url
+          endif
+          if promo_url == blank and promo_title != blank
+            assign promo_url = routes.search_url | append: '?type=product&q=' | append: promo_title | url_encode
+          endif
+        %}
+        {% if promo_title != blank %}
+          <a
+            class="kuwayt-promo{% if forloop.first %} kuwayt-promo--lead{% endif %}"
+            {% if promo_url != blank %}
+              href="{{ promo_url }}"
+            {% endif %}
+            style="--kuwayt-promo-bg: {{ block.settings.background }}; --kuwayt-promo-ink: {{ block.settings.ink }};"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 1400
+                | image_tag:
+                  widths: '400, 700, 1000, 1400',
+                  sizes: '(min-width: 990px) 40vw, 100vw',
+                  loading: 'lazy',
+                  alt: '',
+                  class: 'kuwayt-promo__image',
+                  width: block.settings.image.width,
+                  height: block.settings.image.height
+              }}
+            {% endif %}
+            <span class="kuwayt-promo__content">
+              {% if block.settings.eyebrow != blank %}
+                <span class="kuwayt-promo__eyebrow">{{ block.settings.eyebrow | escape }}</span>
+              {% endif %}
+              <span class="kuwayt-promo__title">{{ promo_title | escape }}</span>
+              {% if block.settings.text != blank %}
+                <span class="kuwayt-promo__text">{{ block.settings.text | escape }}</span>
+              {% endif %}
+              {% if block.settings.link_label != blank %}
+                <span class="kuwayt-promo__link">{{ block.settings.link_label | escape }}</span>
+              {% endif %}
+            </span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .kuwayt-promos {
+    padding-block: var(--kuwayt-promos-pad);
+    background: #fff;
+  }
+
+  .kuwayt-promos__heading {
+    margin: 0 0 1rem;
+    color: #202124;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    letter-spacing: -0.02em;
+  }
+
+  .kuwayt-promos__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0.875rem;
+  }
+
+  .kuwayt-promo {
+    position: relative;
+    display: flex;
+    min-height: 11rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--kuwayt-promo-bg);
+    color: var(--kuwayt-promo-ink);
+    text-decoration: none;
+  }
+
+  .kuwayt-promo--lead {
+    grid-row: span 2;
+    min-height: 23rem;
+  }
+
+  .kuwayt-promo__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .kuwayt-promo:has(.kuwayt-promo__image) .kuwayt-promo__content {
+    background: linear-gradient(180deg, rgb(32 33 36 / 8%), rgb(32 33 36 / 55%));
+    color: #fff;
+  }
+
+  .kuwayt-promo__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .kuwayt-promo__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .kuwayt-promo__title {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .kuwayt-promo__text {
+    max-width: 28ch;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
+
+  .kuwayt-promo__link {
+    margin-top: 0.4rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .kuwayt-promo:focus-visible {
+    outline: 2px solid #009eaa;
+    outline-offset: 3px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .kuwayt-promos__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .kuwayt-promo--lead {
+      grid-row: auto;
+      min-height: 14rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KUWAYT promos",
+  "tag": "section",
+  "class": "kuwayt-promos-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop the departments"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo",
+      "name": "Banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Campaign"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Shop now"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Custom link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#009EAA"
+        },
+        {
+          "type": "color",
+          "id": "ink",
+          "label": "Text",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "KUWAYT promos",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}

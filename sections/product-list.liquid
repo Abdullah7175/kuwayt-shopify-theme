@@ -1,10 +1,22 @@
 {% liquid
   assign max_items = section.settings.max_products
+  assign show_product_list = true
+  assign collection_ready = false
+
+  if section.settings.collection != blank and section.settings.collection.products_count > 0
+    assign collection_ready = true
+  endif
+
+  if section.settings.hide_if_empty and collection_ready == false and request.design_mode == false
+    assign show_product_list = false
+  endif
+
   if section.settings.background_color != blank
     render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
   endif
 %}
 
+{% if show_product_list %}
 <div
   class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
 ></div>
@@ -23,6 +35,11 @@
     {% render 'gap-style', value: section.settings.gap %}
   "
 >
+  {% if request.design_mode and section.settings.hide_if_empty and collection_ready == false %}
+    <div class="kuwayt-editor-note" {{ section.shopify_attributes }}>
+      <p>This product row stays hidden on the storefront until its collection has products. Choose that collection in the section settings.</p>
+    </div>
+  {% endif %}
   <div class="section-resource-list__header">
     {%- content_for 'block', type: '_product-list-content', id: 'static-header' -%}
   </div>
@@ -83,6 +100,7 @@
     {%- content_for 'blocks' -%}
   </div>
 </div>
+{% endif %}
 
 {% schema %}
 {
@@ -107,6 +125,13 @@
       "type": "collection",
       "id": "collection",
       "label": "t:settings.collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_if_empty",
+      "label": "Hide when the collection is empty",
+      "info": "Keeps Best sellers, New arrivals and Trending off the storefront until those collections have products.",
+      "default": false
     },
     {
       "type": "select",

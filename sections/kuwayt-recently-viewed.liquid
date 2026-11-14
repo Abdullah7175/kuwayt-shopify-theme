@@ -1,0 +1,201 @@
+{%- liquid
+  assign max_items = section.settings.max_products
+  assign has_products = false
+  assign ordered_ids = blank
+
+  if search.performed and search.terms contains 'id:'
+    assign ordered_ids = search.terms | replace: 'id:', '' | split: ' OR '
+    if search.results_count > 0
+      assign has_products = true
+    endif
+  endif
+-%}
+
+<script
+  src="{{ 'kuwayt-recently-viewed.js' | asset_url }}"
+  type="module"
+></script>
+
+{% if request.design_mode %}
+  <div class="kuwayt-editor-note">
+    <p>Recently viewed appears after a shopper opens a product. It stays hidden on a first visit.</p>
+  </div>
+{% endif %}
+
+<kuwayt-recently-viewed
+  class="kuwayt-recent"
+  data-section-id="{{ section.id }}"
+  data-search-url="{{ routes.search_url }}"
+  hidden
+  {{ section.shopify_attributes }}
+>
+  <div class="section section--page-width kuwayt-recent__inner">
+    {% if section.settings.heading != blank %}
+      <h2 class="kuwayt-recent__heading">{{ section.settings.heading | escape }}</h2>
+    {% endif %}
+
+    <div
+      class="kuwayt-recent__grid"
+      data-kuwayt-recent-grid
+      data-has-products="{% if has_products %}true{% else %}false{% endif %}"
+    >
+      {% if has_products %}
+        {% if ordered_ids != blank %}
+          {% for raw_id in ordered_ids limit: max_items %}
+            {% liquid
+              assign product_id = raw_id | strip | times: 1
+              assign recent_product = search.results | find: 'id', product_id
+            %}
+            {% if recent_product != blank %}
+              <div class="kuwayt-recent__item">
+                {% content_for 'block',
+                  type: '_product-card',
+                  id: 'static-product-card',
+                  closest.product: recent_product,
+                  product_view_context: 'search'
+                %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% for recent_product in search.results limit: max_items %}
+            <div class="kuwayt-recent__item">
+              {% content_for 'block',
+                type: '_product-card',
+                id: 'static-product-card',
+                closest.product: recent_product,
+                product_view_context: 'search'
+              %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</kuwayt-recently-viewed>
+
+{% stylesheet %}
+  .kuwayt-recent {
+    display: block;
+    padding-block: 1.5rem 2rem;
+    background: #fff;
+  }
+
+  .kuwayt-recent[hidden] {
+    display: none;
+  }
+
+  .kuwayt-recent__heading {
+    margin: 0 0 1rem;
+    color: #202124;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    letter-spacing: -0.02em;
+  }
+
+  .kuwayt-recent__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.875rem 0.75rem;
+  }
+
+  @media screen and (max-width: 989px) {
+    .kuwayt-recent__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .kuwayt-recent__grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 68%;
+      grid-template-columns: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .kuwayt-recent__item {
+      scroll-snap-align: start;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KUWAYT recently viewed",
+  "tag": "section",
+  "class": "kuwayt-recent-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recently viewed"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "Products",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "paragraph",
+      "content": "Shows products this browser has opened. Nothing is shown on a first visit."
+    }
+  ],
+  "presets": [
+    {
+      "name": "KUWAYT recently viewed",
+      "category": "Products",
+      "blocks": {
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "Product card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "square"
+              }
+            },
+            "title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "paragraph"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "width": "100%",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": ["gallery", "title", "price"]
+        }
+      }
+    }
+  ]
+}
+{% endschema %}

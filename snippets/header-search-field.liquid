@@ -1,0 +1,100 @@
+{%- doc -%}
+  Prominent header search. Submits to Shopify search and uses the theme predictive search.
+
+  @param {string} [placeholder] - Input placeholder. Falls back to the theme search label.
+{%- enddoc -%}
+
+{%- liquid
+  if placeholder != blank
+    assign search_placeholder = placeholder
+  else
+    assign search_placeholder = 'content.search_input_placeholder' | t
+  endif
+-%}
+
+<predictive-search-component
+  class="predictive-search kuwayt-header-search color-custom-popover"
+  data-section-id="predictive-search"
+  data-testid="search-component--header"
+  role="search"
+  aria-label="{{ 'content.search_input_label' | t }}"
+>
+  <form
+    action="{{ routes.search_url }}"
+    method="get"
+    role="search"
+    class="predictive-search-form kuwayt-header-search__form"
+    ref="form"
+    on:keydown="/onSearchKeyDown"
+  >
+    <div class="kuwayt-header-search__bar">
+      <label
+        for="kuwayt-header-search-input"
+        class="visually-hidden"
+      >
+        {{ 'content.search_input_label' | t }}
+      </label>
+      <input
+        class="search-input kuwayt-header-search__input"
+        id="kuwayt-header-search-input"
+        type="search"
+        name="q"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="kuwayt-header-search-results"
+        aria-autocomplete="list"
+        autocomplete="off"
+        placeholder="{{ search_placeholder | escape }}"
+        ref="searchInput"
+        on:input="/search"
+        on:keydown="/onSearchKeyDown"
+      >
+      <input
+        name="type"
+        type="hidden"
+        value="product"
+      >
+      <input
+        name="options[prefix]"
+        type="hidden"
+        value="last"
+      >
+      <button
+        type="button"
+        class="button-unstyled predictive-search__reset-button kuwayt-header-search__reset"
+        ref="resetButton"
+        hidden
+        on:click="/resetSearch"
+      >
+        {{ 'actions.clear' | t }}
+      </button>
+      <button
+        type="submit"
+        class="kuwayt-header-search__submit"
+        aria-label="{{ 'content.search_input_label' | t }}"
+      >
+        <span class="svg-wrapper" aria-hidden="true">
+          {{ 'icon-search.svg' | inline_asset_content }}
+        </span>
+      </button>
+    </div>
+
+    <div class="predictive-search-form__content-wrapper">
+      <div
+        class="predictive-search-form__content"
+        id="kuwayt-header-search-results"
+        ref="predictiveSearchResults"
+        on:click="/handleModalClick"
+      ></div>
+      <div class="predictive-search-form__footer">
+        <button
+          class="button predictive-search__search-button"
+          ref="viewAllButton"
+          type="submit"
+        >
+          {{ 'content.search_results_view_all' | t }}
+        </button>
+      </div>
+    </div>
+  </form>
+</predictive-search-component>
