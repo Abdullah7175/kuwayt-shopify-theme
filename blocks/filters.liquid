@@ -202,6 +202,25 @@
 
               {% capture rendered_filters %}
                 {%- for filter in filters -%}
+                  {%- liquid
+                    assign show_filter = true
+                    if filter.type == 'price_range'
+                      if filter.range_max == blank
+                        assign show_filter = false
+                      endif
+                    else
+                      assign available_value_count = 0
+                      for value in filter.values
+                        if value.count > 0 or value.active
+                          assign available_value_count = available_value_count | plus: 1
+                        endif
+                      endfor
+                      if available_value_count == 0
+                        assign show_filter = false
+                      endif
+                    endif
+                  -%}
+                  {% if show_filter %}
                   {% case filter.type %}
                     {% when 'price_range' %}
                       {%- liquid
@@ -234,6 +253,7 @@
                         render 'list-filter', filter: filter, filter_style: block_settings.filter_style, active_value_count: active_value_count, should_render_clear: should_render_clear, show_swatch_label: block_settings.show_swatch_label, sectionId: section.id
                       %}
                   {% endcase %}
+                  {% endif %}
                 {%- endfor -%}
               {% endcapture %}
 
@@ -472,6 +492,25 @@
                 {% assign is_active = false %}
 
                 {%- for filter in filters -%}
+                  {%- liquid
+                    assign show_filter = true
+                    if filter.type == 'price_range'
+                      if filter.range_max == blank
+                        assign show_filter = false
+                      endif
+                    else
+                      assign available_value_count = 0
+                      for value in filter.values
+                        if value.count > 0 or value.active
+                          assign available_value_count = available_value_count | plus: 1
+                        endif
+                      endfor
+                      if available_value_count == 0
+                        assign show_filter = false
+                      endif
+                    endif
+                  -%}
+                  {% if show_filter %}
                   {% case filter.type %}
                     {% when 'price_range' %}
                       {%- liquid
@@ -493,6 +532,7 @@
                         render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, in_drawer: true, sectionId: section.id
                       %}
                   {% endcase %}
+                  {% endif %}
                 {%- endfor -%}
               </div>
             {% endif %}

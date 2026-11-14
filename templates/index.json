@@ -20,8 +20,36 @@
         "secondary_label": "Browse categories",
         "image_alt": "KUWAYT, one stop for all",
         "padding_top": 28,
-        "padding_bottom": 12
-      }
+        "padding_bottom": 12,
+        "autoplay": true,
+        "speed": 6
+      },
+      "blocks": {
+        "slide_one": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "One stop for all",
+            "heading": "One store. Every department.",
+            "text": "Shop tech, accessories, beauty and clothing from one catalog.",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "slide_two": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "KUWAYT",
+            "heading": "Find it faster.",
+            "text": "Search by product, brand or category, then check out once.",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "slide_one",
+        "slide_two"
+      ]
     },
     "kuwayt_trust": {
       "type": "kuwayt-trust",
@@ -30,28 +58,28 @@
           "type": "highlight",
           "settings": {
             "title": "Delivery",
-            "text": "Delivery options are confirmed during Shopify checkout."
+            "text": "Delivery choices are shown at checkout."
           }
         },
         "highlight_search": {
           "type": "highlight",
           "settings": {
-            "title": "Secure payments",
-            "text": "Payment stays on Shopify's secure checkout."
+            "title": "Secure payment",
+            "text": "Payments run through Shopify checkout."
           }
         },
         "highlight_prices": {
           "type": "highlight",
           "settings": {
-            "title": "Customer support",
-            "text": "Use the contact page to send the store a message."
+            "title": "Easy returns",
+            "text": "Returns follow the refund policy published for this store."
           }
         },
         "highlight_checkout": {
           "type": "highlight",
           "settings": {
-            "title": "Real prices",
-            "text": "Prices and sale badges come from the products in this store."
+            "title": "Support",
+            "text": "Send a message from the contact page."
           }
         }
       },
@@ -262,7 +290,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -421,7 +449,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -527,7 +555,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -634,7 +662,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -697,7 +725,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -801,7 +829,7 @@
             "gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border_radius": 8
               }
             },
@@ -851,10 +879,147 @@
         "padding-block-end": 12,
         "background_color": "#F6F7F8"
       }
+    },
+    "shop_by_department": {
+      "type": "kuwayt-shop-by",
+      "blocks": {
+        "tech": {
+          "type": "tile",
+          "settings": {
+            "title": "Tech & Electronics",
+            "handle": "tech-electronics"
+          }
+        },
+        "accessories": {
+          "type": "tile",
+          "settings": {
+            "title": "Accessories",
+            "handle": "accessories"
+          }
+        },
+        "beauty": {
+          "type": "tile",
+          "settings": {
+            "title": "Health & Beauty",
+            "handle": "health-beauty"
+          }
+        },
+        "clothing": {
+          "type": "tile",
+          "settings": {
+            "title": "Clothing",
+            "handle": "clothing"
+          }
+        }
+      },
+      "block_order": [
+        "tech",
+        "accessories",
+        "beauty",
+        "clothing"
+      ],
+      "settings": {
+        "heading": "Shop by department"
+      }
+    },
+    "shop_by_price": {
+      "type": "kuwayt-shop-by",
+      "blocks": {
+        "under_1000": {
+          "type": "tile",
+          "settings": {
+            "title": "Under Rs. 1,000",
+            "manual_url": "/collections/all?filter.v.price.lte=100000"
+          }
+        },
+        "under_2500": {
+          "type": "tile",
+          "settings": {
+            "title": "Under Rs. 2,500",
+            "manual_url": "/collections/all?filter.v.price.lte=250000"
+          }
+        }
+      },
+      "block_order": [
+        "under_1000",
+        "under_2500"
+      ],
+      "settings": {
+        "heading": "Shop by price"
+      }
+    },
+    "shop_by_need": {
+      "type": "kuwayt-shop-by",
+      "blocks": {
+        "everyday": {
+          "type": "tile",
+          "settings": {
+            "title": "Everyday",
+            "handle": "everyday-essentials"
+          }
+        },
+        "gifts": {
+          "type": "tile",
+          "settings": {
+            "title": "Gifts",
+            "handle": "gifts"
+          }
+        }
+      },
+      "block_order": [
+        "everyday",
+        "gifts"
+      ],
+      "settings": {
+        "heading": "Shop by need"
+      }
+    },
+    "kuwayt_departments": {
+      "type": "kuwayt-department",
+      "blocks": {
+        "tech": {
+          "type": "department",
+          "settings": {
+            "title": "Tech & Electronics",
+            "handle": "tech-electronics"
+          }
+        },
+        "accessories": {
+          "type": "department",
+          "settings": {
+            "title": "Accessories",
+            "handle": "accessories"
+          }
+        },
+        "beauty": {
+          "type": "department",
+          "settings": {
+            "title": "Health & Beauty",
+            "handle": "health-beauty"
+          }
+        },
+        "clothing": {
+          "type": "department",
+          "settings": {
+            "title": "Clothing",
+            "handle": "clothing"
+          }
+        }
+      },
+      "block_order": [
+        "tech",
+        "accessories",
+        "beauty",
+        "clothing"
+      ]
     }
   },
   "order": [
     "kuwayt_hero",
+    "shop_by_department",
+    "shop_by_price",
+    "kuwayt_departments",
+    "shop_by_need",
     "kuwayt_trust",
     "kuwayt_featured_departments",
     "kuwayt_categories",

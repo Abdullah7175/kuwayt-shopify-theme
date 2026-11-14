@@ -1,0 +1,139 @@
+{%- liquid
+  assign visible_departments = 0
+  for block in section.blocks
+    assign department = block.settings.collection
+    if department == blank and block.settings.handle != blank
+      assign department = collections[block.settings.handle]
+    endif
+    if department.id != blank and department.products_count > 0
+      assign visible_departments = visible_departments | plus: 1
+    endif
+  endfor
+-%}
+{% if visible_departments > 0 or request.design_mode %}
+  <div class="kuwayt-department" id="kuwayt-departments" {{ section.shopify_attributes }}>
+    <div class="section section--page-width">
+      {% if request.design_mode and visible_departments == 0 %}
+        <p class="kuwayt-editor-note">Each department stays hidden until its collection has products.</p>
+      {% endif %}
+      {% for block in section.blocks %}
+        {% liquid
+          assign department = block.settings.collection
+          if department == blank and block.settings.handle != blank
+            assign department = collections[block.settings.handle]
+          endif
+          if department.id == blank
+            assign department = blank
+          endif
+          assign hide_department = false
+          if request.design_mode == false and department.products_count < 1
+            assign hide_department = true
+          endif
+          assign department_title = block.settings.title
+          if department.title != blank
+            assign department_title = department.title
+          endif
+          assign department_image = department.featured_image | default: department.image
+          if department_image == blank and department.products.first.featured_image != blank
+            assign department_image = department.products.first.featured_image
+          endif
+        %}
+        {% unless hide_department %}
+          <section class="kuwayt-department__block" {{ block.shopify_attributes }}>
+            <a class="kuwayt-department__feature" href="{{ department.url | default: '#' }}">
+              {% if department_image != blank %}
+                {{
+                  department_image
+                  | image_url: width: 1200
+                  | image_tag:
+                    widths: '320, 480, 720, 960, 1200',
+                    sizes: '(min-width: 990px) 28vw, 100vw',
+                    loading: 'lazy',
+                    alt: department_title,
+                    width: department_image.width,
+                    height: department_image.height
+                }}
+              {% else %}
+                <span class="kuwayt-department__placeholder">{{ department_title | escape }}</span>
+              {% endif %}
+              <span class="kuwayt-department__feature-title">{{ department_title | escape }}</span>
+            </a>
+            {% if department.products_count > 0 %}
+              <ul class="kuwayt-department__products" role="list">
+                {% for product in department.products limit: 4 %}
+                  <li>
+                    <a class="kuwayt-mini-card" href="{{ product.url }}">
+                      <span class="kuwayt-mini-card__media">
+                        {% if product.featured_image != blank %}
+                          {{
+                            product.featured_image
+                            | image_url: width: 600
+                            | image_tag:
+                              widths: '160, 240, 360, 480, 600',
+                              sizes: '(min-width: 990px) 16vw, 45vw',
+                              loading: 'lazy',
+                              alt: product.featured_image.alt | default: product.title,
+                              width: product.featured_image.width,
+                              height: product.featured_image.height
+                          }}
+                        {% endif %}
+                      </span>
+                      <span class="kuwayt-mini-card__title">{{ product.title | escape }}</span>
+                      <span class="kuwayt-mini-card__price">
+                        {{ product.price | money }}
+                        {% if product.compare_at_price > product.price %}
+                          <s>{{ product.compare_at_price | money }}</s>
+                        {% endif %}
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </section>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Departments",
+  "tag": "section",
+  "class": "kuwayt-department-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "department",
+      "name": "Department",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Label",
+          "default": "Department"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Collection handle",
+          "info": "Used when the collection picker is empty."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Departments"
+    }
+  ]
+}
+{% endschema %}

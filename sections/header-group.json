@@ -17,13 +17,13 @@
         "announcement_brand": {
           "type": "_announcement",
           "settings": {
-            "text": "KUWAYT — One stop for all",
+            "text": "Delivery options are confirmed at checkout",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "600",
-            "letter_spacing": "loose",
-            "case": "uppercase",
+            "letter_spacing": "normal",
+            "case": "none",
             "text_color": "#ffffff"
           },
           "blocks": {}
@@ -31,13 +31,13 @@
         "announcement_departments": {
           "type": "_announcement",
           "settings": {
-            "text": "Electronics, fashion, home, beauty, fitness and everyday essentials",
+            "text": "Secure payment through Shopify checkout",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "600",
-            "letter_spacing": "loose",
-            "case": "uppercase",
+            "letter_spacing": "normal",
+            "case": "none",
             "text_color": "#ffffff"
           },
           "blocks": {}
@@ -45,13 +45,13 @@
         "announcement_search": {
           "type": "_announcement",
           "settings": {
-            "text": "Search the catalog or browse a department",
+            "text": "One catalog across every department",
             "link": "shopify://collections/all",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "600",
-            "letter_spacing": "loose",
-            "case": "uppercase",
+            "letter_spacing": "normal",
+            "case": "none",
             "text_color": "#ffffff"
           },
           "blocks": {}
@@ -68,8 +68,8 @@
         "section_width": "full-width",
         "background_color": "#009EAA",
         "divider_width": 0,
-        "padding-block-start": 8,
-        "padding-block-end": 8
+        "padding-block-start": 4,
+        "padding-block-end": 4
       }
     },
     "header_section": {

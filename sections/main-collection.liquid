@@ -57,7 +57,44 @@
         }}
       </div>
     {% endif %}
-    <p class="kuwayt-collection-count section section--page-width">{{ collection.products_count }} products</p>
+    <div class="section section--page-width">
+      <p class="kuwayt-collection-count">
+        {{ 'content.search_results_resource_products_count' | t: count: collection.products_count }}
+      </p>
+    </div>
+
+    {% liquid
+      assign shop_links = blank
+      assign navigation = linklists['main-menu']
+      for link in navigation.links
+        if link.url == collection.url and link.links.size > 0
+          assign shop_links = link.links
+        endif
+        for child in link.links
+          if child.url == collection.url and child.links.size > 0
+            assign shop_links = child.links
+          endif
+        endfor
+      endfor
+    %}
+    {% if shop_links.size > 0 %}
+      <div class="section section--page-width">
+        <div class="kuwayt-shop-by kuwayt-shop-by--collection">
+          <h2 class="kuwayt-shop-by__heading">Shop by category</h2>
+          <ul class="kuwayt-shop-by__row" role="list">
+            {% for link in shop_links %}
+              {% if link.url != blank %}
+                <li>
+                  <a class="kuwayt-shop-by__tile" href="{{ link.url }}">
+                    <span class="kuwayt-shop-by__label">{{ link.title | escape }}</span>
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
 
     <div
       class="collection-wrapper grid gap-style{% if section.settings.product_grid_width == 'full-width' %} collection-wrapper--grid-full-width{% endif %}"

@@ -1,3 +1,8 @@
+<script>
+  if (!(window.Shopify && Shopify.designMode) && localStorage.getItem('kuwayt-promo-dismissed') === '1') {
+    document.documentElement.classList.add('kuwayt-promo-dismissed');
+  }
+</script>
 {% if section.blocks.size > 1 %}
   <script
     src="{{ 'announcement-bar.js' | asset_url }}"
@@ -35,8 +40,29 @@
     <div class="announcement-bar__slides">
       {% content_for 'blocks' %}
     </div>
+    <button
+      class="kuwayt-promo-dismiss"
+      type="button"
+      aria-label="{{ 'actions.close' | t }}"
+    >
+      <span class="svg-wrapper">
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </button>
   </announcement-bar-component>
 </aside>
+<script>
+  (function () {
+    var button = document.querySelector('.kuwayt-promo-dismiss');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      document.documentElement.classList.add('kuwayt-promo-dismissed');
+      try {
+        localStorage.setItem('kuwayt-promo-dismissed', '1');
+      } catch (error) {}
+    });
+  })();
+</script>
 
 {% stylesheet %}
   .announcement-bar {

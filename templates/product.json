@@ -372,7 +372,7 @@
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "portrait",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
@@ -458,10 +458,39 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "kuwayt_details": {
+      "type": "kuwayt-details",
+      "blocks": {
+        "shipping": {
+          "type": "note",
+          "settings": {
+            "title": "Shipping",
+            "text": "<p>Shipping options are confirmed at checkout. The shipping policy appears in the footer after it is published.</p>",
+            "open": false
+          }
+        },
+        "returns": {
+          "type": "note",
+          "settings": {
+            "title": "Returns",
+            "text": "<p>Returns follow the refund policy published for this store.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "shipping",
+        "returns"
+      ],
+      "settings": {
+        "heading": "Shipping and returns"
+      }
     }
   },
   "order": [
     "main",
+    "kuwayt_details",
     "product_recommendations_qggXJq"
   ]
 }
