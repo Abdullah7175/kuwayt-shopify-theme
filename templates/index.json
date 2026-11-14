@@ -15,7 +15,7 @@
         "eyebrow": "One stop for all",
         "heading": "Everything you need, in one store.",
         "text": "<p>Shop electronics, fashion, home, beauty, fitness and everyday essentials. Search the catalog, browse a department, and check out once.</p>",
-        "primary_label": "Shop all products",
+        "primary_label": "Shop now",
         "primary_link": "shopify://collections/all",
         "secondary_label": "Browse categories",
         "image_alt": "KUWAYT, one stop for all",
@@ -29,29 +29,29 @@
         "highlight_catalog": {
           "type": "highlight",
           "settings": {
-            "title": "One catalog",
-            "text": "Every department in a single store."
+            "title": "Delivery",
+            "text": "Delivery options are confirmed during Shopify checkout."
           }
         },
         "highlight_search": {
           "type": "highlight",
           "settings": {
-            "title": "Search first",
-            "text": "Find a product by name, brand or category."
+            "title": "Secure payments",
+            "text": "Payment stays on Shopify's secure checkout."
           }
         },
         "highlight_prices": {
           "type": "highlight",
           "settings": {
-            "title": "Real prices",
-            "text": "Sale and compare-at prices come from each product."
+            "title": "Customer support",
+            "text": "Use the contact page to send the store a message."
           }
         },
         "highlight_checkout": {
           "type": "highlight",
           "settings": {
-            "title": "Secure checkout",
-            "text": "Checkout and payment stay on Shopify."
+            "title": "Real prices",
+            "text": "Prices and sale badges come from the products in this store."
           }
         }
       },
@@ -62,7 +62,7 @@
         "highlight_checkout"
       ],
       "settings": {
-        "heading": "Store highlights"
+        "heading": "Why shop with KUWAYT"
       }
     },
     "kuwayt_featured_departments": {
@@ -72,6 +72,7 @@
           "type": "category",
           "settings": {
             "title": "Electronics",
+            "handle": "electronics",
             "accent": "#009EAA",
             "ink": "#FFFFFF"
           }
@@ -80,6 +81,7 @@
           "type": "category",
           "settings": {
             "title": "Fashion",
+            "handle": "fashion",
             "accent": "#50D66A",
             "ink": "#202124"
           }
@@ -88,6 +90,7 @@
           "type": "category",
           "settings": {
             "title": "Home & Living",
+            "handle": "home-living",
             "accent": "#067A84",
             "ink": "#FFFFFF"
           }
@@ -96,18 +99,24 @@
           "type": "category",
           "settings": {
             "title": "Beauty & Personal Care",
+            "handle": "beauty-personal-care",
             "accent": "#FFE45C",
             "ink": "#202124"
           }
         }
       },
-      "block_order": ["electronics", "fashion", "home", "beauty"],
+      "block_order": [
+        "electronics",
+        "fashion",
+        "home",
+        "beauty"
+      ],
       "name": "Featured collections",
       "settings": {
         "heading": "Featured collections",
-        "subheading": "Open a department, then assign its collection in the theme editor.",
+        "subheading": "Collections appear here once they have an image.",
         "layout": "cards",
-        "hide_until_collections": false,
+        "hide_until_collections": true,
         "padding": 28
       }
     },
@@ -118,6 +127,7 @@
           "type": "category",
           "settings": {
             "title": "Electronics",
+            "handle": "electronics",
             "accent": "#009EAA",
             "ink": "#FFFFFF"
           }
@@ -126,6 +136,7 @@
           "type": "category",
           "settings": {
             "title": "Fashion",
+            "handle": "fashion",
             "accent": "#50D66A",
             "ink": "#202124"
           }
@@ -134,6 +145,7 @@
           "type": "category",
           "settings": {
             "title": "Home & Living",
+            "handle": "home-living",
             "accent": "#067A84",
             "ink": "#FFFFFF"
           }
@@ -142,6 +154,7 @@
           "type": "category",
           "settings": {
             "title": "Beauty & Personal Care",
+            "handle": "beauty-personal-care",
             "accent": "#F3FBFC",
             "ink": "#202124"
           }
@@ -150,6 +163,7 @@
           "type": "category",
           "settings": {
             "title": "Accessories",
+            "handle": "accessories",
             "accent": "#FFE45C",
             "ink": "#202124"
           }
@@ -158,6 +172,7 @@
           "type": "category",
           "settings": {
             "title": "Sports & Fitness",
+            "handle": "sports-fitness",
             "accent": "#009EAA",
             "ink": "#FFFFFF"
           }
@@ -166,6 +181,7 @@
           "type": "category",
           "settings": {
             "title": "Everyday Essentials",
+            "handle": "everyday-essentials",
             "accent": "#50D66A",
             "ink": "#202124"
           }
@@ -183,10 +199,10 @@
       "name": "Shop by category",
       "settings": {
         "heading": "Shop by category",
-        "subheading": "Seven departments. Connect each one to a collection when it is ready.",
-        "layout": "circles",
+        "subheading": "Departments appear when each collection has an image.",
+        "layout": "cards",
         "anchor_id": "kuwayt-shop-categories",
-        "hide_until_collections": false,
+        "hide_until_collections": true,
         "padding": 12
       }
     },
@@ -231,7 +247,10 @@
               }
             }
           },
-          "block_order": ["heading", "view_all"]
+          "block_order": [
+            "heading",
+            "view_all"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -268,7 +287,11 @@
               }
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
       "name": "Featured products",
@@ -300,6 +323,7 @@
           "settings": {
             "eyebrow": "Department",
             "title": "Electronics",
+            "handle": "electronics",
             "text": "Devices, audio and accessories from the catalog.",
             "link_label": "Shop electronics",
             "background": "#009EAA",
@@ -311,6 +335,7 @@
           "settings": {
             "eyebrow": "Department",
             "title": "Fashion",
+            "handle": "fashion",
             "text": "Clothing and footwear.",
             "link_label": "Shop fashion",
             "background": "#50D66A",
@@ -322,6 +347,7 @@
           "settings": {
             "eyebrow": "Department",
             "title": "Home & Living",
+            "handle": "home-living",
             "text": "Pieces for every room.",
             "link_label": "Shop home",
             "background": "#FFE45C",
@@ -329,7 +355,11 @@
           }
         }
       },
-      "block_order": ["electronics", "fashion", "home"],
+      "block_order": [
+        "electronics",
+        "fashion",
+        "home"
+      ],
       "settings": {
         "heading": "Shop the departments",
         "padding": 8
@@ -376,7 +406,10 @@
               }
             }
           },
-          "block_order": ["heading", "view_all"]
+          "block_order": [
+            "heading",
+            "view_all"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -413,7 +446,11 @@
               }
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
       "name": "Best sellers",
@@ -475,7 +512,10 @@
               }
             }
           },
-          "block_order": ["heading", "view_all"]
+          "block_order": [
+            "heading",
+            "view_all"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -512,7 +552,11 @@
               }
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
       "name": "New arrivals",
@@ -575,7 +619,10 @@
               }
             }
           },
-          "block_order": ["heading", "view_all"]
+          "block_order": [
+            "heading",
+            "view_all"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -612,7 +659,11 @@
               }
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
       "name": "Trending products",
@@ -671,7 +722,11 @@
               }
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
       "settings": {
@@ -689,6 +744,113 @@
         "success": "You are on the list.",
         "padding": 36
       }
+    },
+    "special_offers": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100
+          },
+          "blocks": {
+            "heading": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>Special offers</h2>",
+                "width": "fit-content",
+                "alignment": "left",
+                "type_preset": "h3"
+              }
+            },
+            "view_all": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "View all",
+                "style_class": "button-unstyled",
+                "width": "fit-content"
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "view_all"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "square",
+                "border_radius": 8
+              }
+            },
+            "title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font_size": "0.9375rem"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "h6"
+              }
+            }
+          },
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
+        }
+      },
+      "name": "Special offers",
+      "settings": {
+        "collection": "special-offers",
+        "hide_if_empty": true,
+        "layout_type": "grid",
+        "max_products": 10,
+        "columns": 5,
+        "mobile_columns": "2",
+        "columns_gap": 12,
+        "rows_gap": 20,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "section_width": "page-width",
+        "gap": 20,
+        "padding-block-start": 28,
+        "padding-block-end": 12,
+        "background_color": "#F6F7F8"
+      }
     }
   },
   "order": [
@@ -699,6 +861,7 @@
     "featured_products",
     "kuwayt_promos",
     "best_sellers",
+    "special_offers",
     "new_arrivals",
     "trending_products",
     "kuwayt_recent",

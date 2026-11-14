@@ -1,0 +1,31 @@
+{%- doc -%}
+  Department links for collections that exist on this store.
+  Collections that have not been created are omitted.
+
+  @param {string} [context] - "bar" or "drawer"
+{%- enddoc -%}
+
+{%- liquid
+  assign context = context | default: 'bar'
+  assign department_handles = 'electronics,fashion,home-living,beauty-personal-care,accessories,sports-fitness,everyday-essentials' | split: ','
+-%}
+
+{%- capture department_items -%}
+  {%- for handle in department_handles -%}
+    {%- assign department = collections[handle] -%}
+    {%- if department.id != blank -%}
+      <li>
+        <a href="{{ department.url }}">{{ department.title | escape }}</a>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- assign department_items = department_items | strip -%}
+{%- if department_items != blank -%}
+  <nav class="kuwayt-departments kuwayt-departments--{{ context }}" aria-label="Departments">
+    <ul role="list">
+      {{ department_items }}
+    </ul>
+  </nav>
+{%- endif -%}

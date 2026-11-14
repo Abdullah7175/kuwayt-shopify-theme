@@ -64,11 +64,11 @@
             "padding-inline-end": 0
           },
           "blocks": {
-        "text_pF6rVi": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>Join the list</h2>",
+            "text_pF6rVi": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Join the list</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -185,10 +185,18 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           }
+        },
+        "store_links": {
+          "type": "kuwayt-store-links",
+          "settings": {
+            "service_heading": "Customer service",
+            "department_heading": "Departments"
+          }
         }
       },
       "block_order": [
         "brand",
+        "store_links",
         "group_wErUQf",
         "menu_footer",
         "menu_main"
@@ -229,23 +237,11 @@
             "tiktok_url": "",
             "twitter_url": ""
           }
-        },
-        "payments": {
-          "type": "payment-icons",
-          "settings": {
-            "horizontal_alignment": "flex-end",
-            "gap": 8,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          }
         }
       },
       "block_order": [
         "copyright",
         "policy_list",
-        "payments",
         "social_icons"
       ],
       "settings": {

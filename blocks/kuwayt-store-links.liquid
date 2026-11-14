@@ -1,0 +1,103 @@
+<div class="kuwayt-store-links" {{ block.shopify_attributes }}>
+  <div class="kuwayt-store-links__group">
+    <h2 class="kuwayt-store-links__heading">{{ block.settings.service_heading | escape }}</h2>
+    <ul role="list">
+      <li>
+        <a href="{{ routes.account_url }}">Account</a>
+      </li>
+      <li>
+        <a href="{{ routes.cart_url }}">Cart</a>
+      </li>
+      <li>
+        <a href="{{ routes.search_url }}">Search</a>
+      </li>
+      {%- if pages.contact.id != blank -%}
+        <li>
+          <a href="{{ pages.contact.url }}">Contact</a>
+        </li>
+      {%- endif -%}
+      {%- if pages.about.id != blank -%}
+        <li>
+          <a href="{{ pages.about.url }}">About KUWAYT</a>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+
+  {%- capture department_links -%}
+    {%- assign department_handles = 'electronics,fashion,home-living,beauty-personal-care,accessories,sports-fitness,everyday-essentials' | split: ',' -%}
+    {%- for handle in department_handles -%}
+      {%- assign department = collections[handle] -%}
+      {%- if department.id != blank -%}
+        <li>
+          <a href="{{ department.url }}">{{ department.title | escape }}</a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- assign department_links = department_links | strip -%}
+  {%- if department_links != blank -%}
+    <div class="kuwayt-store-links__group">
+      <h2 class="kuwayt-store-links__heading">{{ block.settings.department_heading | escape }}</h2>
+      <ul role="list">
+        {{ department_links }}
+      </ul>
+    </div>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .kuwayt-store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    color: inherit;
+  }
+
+  .kuwayt-store-links__heading {
+    margin: 0 0 0.75rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .kuwayt-store-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .kuwayt-store-links a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .kuwayt-store-links a:hover {
+    text-decoration: underline;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Store links",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "service_heading",
+      "label": "Customer service heading",
+      "default": "Customer service"
+    },
+    {
+      "type": "text",
+      "id": "department_heading",
+      "label": "Department heading",
+      "default": "Departments"
+    }
+  ]
+}
+{% endschema %}

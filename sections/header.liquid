@@ -494,6 +494,9 @@
         <div class="header__columns spacing-style">
           {{ content }}
         </div>
+        {% if row == 'bottom' %}
+          {% render 'kuwayt-departments', context: 'bar' %}
+        {% endif %}
       </div>
     {% endif %}
   {% endfor %}

@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Breadcrumb",
           "settings": {
-            "text": "<p><a href=\"{{ routes.root_url }}\">Home</a> / {{ closest.collection.title }}</p>",
+            "text": "<p><a href=\"/\">Home</a> / {{ closest.collection.title }}</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",

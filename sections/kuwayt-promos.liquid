@@ -1,3 +1,18 @@
+{%- liquid
+  assign visible_promos = 0
+  for block in section.blocks
+    assign promo_collection = block.settings.collection
+    if promo_collection == blank and block.settings.handle != blank
+      assign promo_collection = collections[block.settings.handle]
+    endif
+    if block.settings.title != blank
+      if request.design_mode or block.settings.handle == blank or promo_collection.id != blank or block.settings.link != blank
+        assign visible_promos = visible_promos | plus: 1
+      endif
+    endif
+  endfor
+-%}
+{% if visible_promos > 0 %}
 <div
   class="kuwayt-promos"
   style="--kuwayt-promos-pad: {{ section.settings.padding }}px;"
@@ -12,15 +27,30 @@
       {% for block in section.blocks %}
         {% liquid
           assign promo_title = block.settings.title
-          assign promo_url = block.settings.link
-          if promo_url == blank and block.settings.collection != blank
-            assign promo_url = block.settings.collection.url
+          assign promo_collection = block.settings.collection
+          if promo_collection == blank and block.settings.handle != blank
+            assign promo_collection = collections[block.settings.handle]
           endif
-          if promo_url == blank and promo_title != blank
+          if promo_collection.id == blank
+            assign promo_collection = blank
+          endif
+          assign promo_url = block.settings.link
+          if promo_url == blank and promo_collection != blank
+            assign promo_url = promo_collection.url
+          endif
+          if promo_url == blank and block.settings.handle == blank and promo_title != blank
             assign promo_url = routes.search_url | append: '?type=product&q=' | append: promo_title | url_encode
           endif
+          assign promo_image = block.settings.image
+          if promo_image == blank and promo_collection.image != blank
+            assign promo_image = promo_collection.image
+          endif
+          assign hide_promo = false
+          if request.design_mode == false and block.settings.handle != blank and promo_collection == blank and block.settings.link == blank
+            assign hide_promo = true
+          endif
         %}
-        {% if promo_title != blank %}
+        {% unless hide_promo or promo_title == blank %}
           <a
             class="kuwayt-promo{% if forloop.first %} kuwayt-promo--lead{% endif %}"
             {% if promo_url != blank %}
@@ -29,9 +59,9 @@
             style="--kuwayt-promo-bg: {{ block.settings.background }}; --kuwayt-promo-ink: {{ block.settings.ink }};"
             {{ block.shopify_attributes }}
           >
-            {% if block.settings.image != blank %}
+            {% if promo_image != blank %}
               {{
-                block.settings.image
+                promo_image
                 | image_url: width: 1400
                 | image_tag:
                   widths: '400, 700, 1000, 1400',
@@ -39,8 +69,8 @@
                   loading: 'lazy',
                   alt: '',
                   class: 'kuwayt-promo__image',
-                  width: block.settings.image.width,
-                  height: block.settings.image.height
+                  width: promo_image.width,
+                  height: promo_image.height
               }}
             {% endif %}
             <span class="kuwayt-promo__content">
@@ -56,11 +86,12 @@
               {% endif %}
             </span>
           </a>
-        {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
   </div>
 </div>
+{% endif %}
 
 {% stylesheet %}
   .kuwayt-promos {
@@ -207,6 +238,12 @@
           "id": "title",
           "label": "Heading",
           "default": "Campaign"
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Collection handle",
+          "info": "The banner stays hidden until this collection exists, unless a custom link is set."
         },
         {
           "type": "text",

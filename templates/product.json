@@ -265,6 +265,31 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "text_kuwayt_shipping": {
+              "type": "text",
+              "name": "Shipping and returns",
+              "settings": {
+                "text": "<p>Shipping and returns follow the policies published for this store. Those policies appear in the footer after they are added in Shopify admin.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -273,6 +298,7 @@
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "text_kuwayt_note",
+            "text_kuwayt_shipping",
             "text_aEtTtq"
           ]
         },
