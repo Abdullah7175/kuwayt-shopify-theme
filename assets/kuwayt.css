@@ -324,6 +324,17 @@ body .product-card > .product-grid__card {
   font-size: 0.875rem;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-block: 2rem 0.5rem;
+}
+
+.pagination__link {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 .cart__continue {
   width: 100%;
   justify-content: center;
