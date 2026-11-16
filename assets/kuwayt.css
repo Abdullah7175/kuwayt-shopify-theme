@@ -32,9 +32,9 @@ body {
 }
 
 .announcement-bar__text {
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .header[sticky] {
@@ -169,17 +169,34 @@ body {
 
 body .product-card > .product-grid__card {
   height: 100%;
-  padding: 0.55rem 0.55rem 0.85rem;
-  border: 1px solid var(--kuwayt-line);
-  border-radius: 0.8rem;
+  padding: 0.4rem 0.4rem 0.95rem;
+  border: 0;
+  border-radius: 18px;
   background: #fff;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 0 rgb(32 33 36 / 4%), 0 12px 32px rgb(32 33 36 / 6%);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .product-card:hover > .product-grid__card,
 .product-card:focus-within > .product-grid__card {
-  border-color: var(--kuwayt-teal);
-  box-shadow: 0 8px 22px rgb(32 33 36 / 8%);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgb(32 33 36 / 12%);
+}
+
+.product-card .product-media {
+  overflow: hidden;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 30%, #fff, var(--kuwayt-soft) 72%);
+}
+
+.product-card .product-media__image {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-media__image,
+.product-card:focus-within .product-media__image {
+  transform: scale(1.045);
 }
 
 .product-card a[ref='productTitleLink'] .text-block :is(p, h1, h2, h3, h4) {
@@ -353,14 +370,14 @@ html.kuwayt-promo-dismissed .announcement-bar {
 }
 
 .kuwayt-hero {
-  background: var(--kuwayt-soft);
+  background: #0c1216;
 }
 
 .kuwayt-hero__viewport {
   position: relative;
-  min-height: clamp(26rem, 72vh, 42rem);
+  min-height: clamp(32rem, 82vh, 48rem);
   overflow: hidden;
-  background: var(--kuwayt-soft);
+  background: #0c1216;
 }
 
 .kuwayt-hero__slide {
@@ -382,9 +399,65 @@ html.kuwayt-promo-dismissed .announcement-bar {
   height: 100%;
 }
 
+.kuwayt-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
 .kuwayt-hero__media img,
 .kuwayt-hero__media video {
   object-fit: cover;
+}
+
+.kuwayt-hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgb(8 12 16 / 78%) 0%, rgb(8 12 16 / 42%) 46%, rgb(8 12 16 / 8%) 100%);
+}
+
+.kuwayt-hero__slide--stage .kuwayt-hero__media::after {
+  background: none;
+}
+
+.kuwayt-hero__stage {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 42% 55% at 78% 42%, rgb(0 158 170 / 62%), transparent 62%),
+    radial-gradient(ellipse 28% 36% at 18% 78%, rgb(255 228 92 / 32%), transparent 60%),
+    radial-gradient(ellipse 24% 30% at 62% 88%, rgb(80 214 106 / 24%), transparent 55%),
+    #0c1216;
+}
+
+.kuwayt-hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+.kuwayt-hero__orb--teal {
+  top: 12%;
+  right: 8%;
+  width: min(42vw, 28rem);
+  height: min(42vw, 28rem);
+  background: rgb(0 158 170 / 45%);
+}
+
+.kuwayt-hero__orb--gold {
+  bottom: 8%;
+  left: 6%;
+  width: min(28vw, 16rem);
+  height: min(28vw, 16rem);
+  background: rgb(255 228 92 / 28%);
+}
+
+.kuwayt-hero__orb--green {
+  right: 22%;
+  bottom: 18%;
+  width: min(22vw, 12rem);
+  height: min(22vw, 12rem);
+  background: rgb(80 214 106 / 22%);
 }
 
 .kuwayt-hero__image--mobile {
@@ -408,32 +481,41 @@ html.kuwayt-promo-dismissed .announcement-bar {
 }
 
 .kuwayt-hero__eyebrow {
-  margin: 0 0 0.6rem;
-  color: var(--kuwayt-teal);
+  margin: 0 0 0.85rem;
+  color: var(--kuwayt-yellow);
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .kuwayt-hero__heading {
   margin: 0;
-  color: var(--kuwayt-ink);
-  font-size: clamp(2.6rem, 6vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+  color: #fff;
+  font-size: clamp(3.1rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
 }
 
 .kuwayt-hero__text {
-  margin: 0.85rem 0 0;
-  color: var(--kuwayt-ink);
-  font-size: 1.05rem;
-  line-height: 1.5;
+  margin: 1rem 0 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 1.125rem;
+  line-height: 1.55;
 }
 
 .kuwayt-hero__button {
-  margin-top: 1.25rem;
+  margin-top: 1.4rem;
   min-height: 48px;
+  background: #fff;
+  color: #101418;
+  border-color: #fff;
+}
+
+.kuwayt-hero__button:hover {
+  background: var(--kuwayt-yellow);
+  border-color: var(--kuwayt-yellow);
+  color: #101418;
 }
 
 .kuwayt-hero__controls {
@@ -511,13 +593,30 @@ html.kuwayt-promo-dismissed .announcement-bar {
 .kuwayt-shop-by__tile {
   display: flex;
   flex-direction: column;
-  min-height: 44px;
+  justify-content: flex-end;
+  min-height: 9.5rem;
   overflow: hidden;
-  color: inherit;
+  color: var(--kuwayt-ink);
   text-decoration: none;
-  background: #fff;
-  border: 1px solid var(--kuwayt-line);
-  border-radius: var(--kuwayt-radius);
+  background:
+    linear-gradient(165deg, #fff 0%, #f4fbfc 68%, #e5f6f7 100%);
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgb(32 33 36 / 6%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kuwayt-shop-by__tile:hover,
+.kuwayt-shop-by__tile:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgb(32 33 36 / 10%);
+}
+
+.kuwayt-shop-by__row > li:nth-child(2) .kuwayt-shop-by__tile:not(:has(img)) {
+  color: #fff;
+  background:
+    radial-gradient(circle at 90% 10%, rgb(255 228 92 / 35%), transparent 36%),
+    linear-gradient(160deg, #12383c, #101418 70%);
 }
 
 .kuwayt-shop-by__media {
@@ -533,8 +632,10 @@ html.kuwayt-promo-dismissed .announcement-bar {
 }
 
 .kuwayt-shop-by__label {
-  padding: 0.85rem 0.9rem 1rem;
+  padding: 1.15rem 1.15rem 1.2rem;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
   font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .kuwayt-department {
@@ -703,12 +804,45 @@ body .kuwayt-newsletter__panel {
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .kuwayt-hero__orb {
+    animation: kuwayt-drift 16s ease-in-out infinite;
+  }
+
+  .kuwayt-hero__orb--gold {
+    animation-delay: -6s;
+  }
+}
+
+@keyframes kuwayt-drift {
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .kuwayt-hero__slide,
   .product-card > .product-grid__card,
   .kuwayt-shop-by__tile {
     transition: none;
   }
+}
+
+.kuwayt-trust__item,
+.kuwayt-trust__item + .kuwayt-trust__item {
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(32 33 36 / 5%);
+}
+
+.kuwayt-trust__title::before {
+  content: '';
+  display: block;
+  width: 1.6rem;
+  height: 2px;
+  margin-bottom: 0.55rem;
+  background: var(--kuwayt-yellow);
 }
 
 .kuwayt-shop-by__tile:focus-visible,

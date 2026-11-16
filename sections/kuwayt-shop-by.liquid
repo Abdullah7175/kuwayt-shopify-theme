@@ -55,8 +55,8 @@
           {% unless hide_tile or tile_label == blank %}
             <li {{ block.shopify_attributes }}>
               <a class="kuwayt-shop-by__tile" href="{{ tile_url | default: '#' }}">
-                <span class="kuwayt-shop-by__media">
-                  {% if tile_image != blank %}
+                {% if tile_image != blank %}
+                  <span class="kuwayt-shop-by__media">
                     {{
                       tile_image
                       | image_url: width: 640
@@ -68,8 +68,8 @@
                         width: tile_image.width,
                         height: tile_image.height
                     }}
-                  {% endif %}
-                </span>
+                  </span>
+                {% endif %}
                 <span class="kuwayt-shop-by__label">{{ tile_label | escape }}</span>
               </a>
             </li>

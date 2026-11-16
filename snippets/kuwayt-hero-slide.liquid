@@ -2,12 +2,16 @@
   assign slide_link = block.settings.button_link | default: routes.all_products_collection_url
   assign slide_alt = block.settings.alt | default: block.settings.heading
   assign image_loading = 'lazy'
+  assign stage = false
   if index == 0
     assign image_loading = 'eager'
   endif
+  if block.settings.video == blank and block.settings.image == blank
+    assign stage = true
+  endif
 -%}
 <article
-  class="kuwayt-hero__slide{% if active %} is-active{% endif %}"
+  class="kuwayt-hero__slide{% if stage %} kuwayt-hero__slide--stage{% endif %}{% if active %} is-active{% endif %}"
   {% unless active %}
     inert
   {% endunless %}
@@ -44,12 +48,11 @@
         }}
       {% endif %}
     {% else %}
-      <img
-        src="{{ 'kuwayt_primary_logo_high_res.png' | asset_url }}"
-        alt="{{ slide_alt | escape }}"
-        width="1600"
-        height="640"
-      >
+      <div class="kuwayt-hero__stage" aria-hidden="true">
+        <span class="kuwayt-hero__orb kuwayt-hero__orb--teal"></span>
+        <span class="kuwayt-hero__orb kuwayt-hero__orb--gold"></span>
+        <span class="kuwayt-hero__orb kuwayt-hero__orb--green"></span>
+      </div>
     {% endif %}
   </div>
   <div class="kuwayt-hero__copy section section--page-width">
