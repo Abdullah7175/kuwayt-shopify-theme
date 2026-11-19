@@ -1536,21 +1536,6 @@
     },
     "17950710353b689e3b": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_94684d6_diX4LT": {
-          "type": "ai_gen_block_94684d6",
-          "settings": {
-            "heading": "Find products",
-            "collection": "aa",
-            "max_price": 9900,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_94684d6_diX4LT"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
