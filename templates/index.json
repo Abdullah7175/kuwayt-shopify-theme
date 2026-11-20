@@ -443,6 +443,14 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "custom_liquid_4KqLFw": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": ""
+              },
+              "blocks": {}
+            },
             "heading": {
               "type": "_product-list-text",
               "settings": {
@@ -487,6 +495,7 @@
             }
           },
           "block_order": [
+            "custom_liquid_4KqLFw",
             "heading",
             "view_all"
           ]
