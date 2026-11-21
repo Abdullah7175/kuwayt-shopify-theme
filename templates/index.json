@@ -100,6 +100,10 @@
         "beauty",
         "clothing"
       ],
+      "custom_css": [
+        "h2 {font-size: 25px;}"
+      ],
+      "name": "Categories",
       "settings": {
         "heading": "Categories"
       }
