@@ -134,7 +134,9 @@
         "clothing"
       ],
       "custom_css": [
-        "h2 {font-size: 25px;}"
+        "/* Desktop: 8 cards in one row */.grid {display: grid !important; grid-template-columns: repeat(8, minmax(0, 1fr)) !important; gap: 15px !important;}",
+        ".grid__item {width: 100% !important; max-width: 100% !important;}",
+        "/* Mobile: 2 cards per row */@media screen and (max-width: 767px) {.grid {grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }}"
       ],
       "name": "Categories",
       "settings": {
