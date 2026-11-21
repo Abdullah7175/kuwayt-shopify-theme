@@ -67,7 +67,7 @@
           "type": "tile",
           "settings": {
             "title": "Home & Kitchen",
-            "collection": "",
+            "collection": "home-kitchen-storage",
             "handle": "Home & Kitchen",
             "link": "shopify://collections/home-kitchen-storage",
             "manual_url": ""
