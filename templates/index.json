@@ -56,9 +56,9 @@
         "tech": {
           "type": "tile",
           "settings": {
-            "title": "Tech & Electronics",
-            "collection": "",
-            "handle": "tech-electronics",
+            "title": "beauty & personal care",
+            "collection": "beauty-personal-care",
+            "handle": "beauty & personal care",
             "link": "",
             "manual_url": ""
           }
