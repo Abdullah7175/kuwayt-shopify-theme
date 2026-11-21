@@ -156,7 +156,7 @@
           "type": "_product-card",
           "static": true,
           "settings": {
-            "product_card_gap": 4,
+            "product_card_gap": 10,
             "background_color": "",
             "border": "none",
             "border_width": 1,
@@ -260,7 +260,7 @@
         "product_card_size": "small",
         "mobile_product_card_size": "small",
         "enable_infinite_scroll": false,
-        "products_per_page": 24,
+        "products_per_page": 20,
         "product_grid_width": "centered",
         "full_width_on_mobile": true,
         "columns_gap_horizontal": 16,
