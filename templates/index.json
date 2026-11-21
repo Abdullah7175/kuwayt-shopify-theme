@@ -76,19 +76,19 @@
         "beauty": {
           "type": "tile",
           "settings": {
-            "title": "Health & Beauty",
-            "collection": "",
-            "handle": "health-beauty",
-            "link": "",
+            "title": "Toys & Games",
+            "collection": "toys-games-1",
+            "handle": "Toys & Games",
+            "link": "shopify://collections/toys-games-1",
             "manual_url": ""
           }
         },
         "clothing": {
           "type": "tile",
           "settings": {
-            "title": "Clothing",
-            "collection": "",
-            "handle": "clothing",
+            "title": "Vehicle Cleaning",
+            "collection": "vehicle-cleaning",
+            "handle": "Vehicle Cleaning",
             "link": "",
             "manual_url": ""
           }
@@ -399,6 +399,7 @@
         "sports",
         "essentials"
       ],
+      "disabled": true,
       "name": "Shop by category",
       "settings": {
         "heading": "Shop by category",
