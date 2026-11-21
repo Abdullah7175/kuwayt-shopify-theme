@@ -208,6 +208,7 @@
         "everyday",
         "gifts"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop by need"
       }
