@@ -53,6 +53,36 @@
     "shop_by_department": {
       "type": "kuwayt-shop-by",
       "blocks": {
+        "tile_gUic7J": {
+          "type": "tile",
+          "settings": {
+            "title": "Home & Living",
+            "collection": "home-living-1",
+            "handle": "Home & Living",
+            "link": "shopify://collections/home-living-1",
+            "manual_url": ""
+          }
+        },
+        "tile_4BXgEw": {
+          "type": "tile",
+          "settings": {
+            "title": "Electronic & Appliances",
+            "collection": "electronic-appliances",
+            "handle": "Electronic & Appliancs",
+            "link": "shopify://collections/electronic-appliances",
+            "manual_url": ""
+          }
+        },
+        "tile_g6zKXX": {
+          "type": "tile",
+          "settings": {
+            "title": "Home & Decor",
+            "collection": "home-decor-1",
+            "handle": "Home & Decor",
+            "link": "shopify://collections/home-decor-1",
+            "manual_url": ""
+          }
+        },
         "tech": {
           "type": "tile",
           "settings": {
@@ -95,6 +125,9 @@
         }
       },
       "block_order": [
+        "tile_gUic7J",
+        "tile_4BXgEw",
+        "tile_g6zKXX",
         "tech",
         "accessories",
         "beauty",
