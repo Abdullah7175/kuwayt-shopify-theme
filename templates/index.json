@@ -56,9 +56,9 @@
         "tech": {
           "type": "tile",
           "settings": {
-            "title": "beauty & personal care",
+            "title": "Beauty & Personal Care",
             "collection": "beauty-personal-care",
-            "handle": "beauty & personal care",
+            "handle": "Beauty & Personal Care",
             "link": "shopify://collections/beauty-personal-care",
             "manual_url": ""
           }
@@ -66,10 +66,10 @@
         "accessories": {
           "type": "tile",
           "settings": {
-            "title": "Accessories",
+            "title": "Home & Kitchen",
             "collection": "",
-            "handle": "accessories",
-            "link": "",
+            "handle": "Home & Kitchen",
+            "link": "shopify://collections/home-kitchen-storage",
             "manual_url": ""
           }
         },
