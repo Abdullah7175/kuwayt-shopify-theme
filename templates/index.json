@@ -304,6 +304,7 @@
         "home",
         "beauty"
       ],
+      "disabled": true,
       "name": "Featured collections",
       "settings": {
         "heading": "Featured collections",
@@ -587,6 +588,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Featured products",
       "settings": {
         "collection": "all",
@@ -660,6 +662,7 @@
         "fashion",
         "home"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop the departments",
         "padding": 8
@@ -1534,6 +1537,7 @@
     },
     "kuwayt_newsletter": {
       "type": "kuwayt-newsletter",
+      "disabled": true,
       "settings": {
         "heading": "Get the KUWAYT list",
         "text": "<p>New arrivals and store news. Subscribe with the email you want KUWAYT to use.</p>",
