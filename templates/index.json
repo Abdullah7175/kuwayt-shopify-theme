@@ -385,7 +385,7 @@
         "hide_if_empty": false,
         "layout_type": "grid",
         "carousel_on_mobile": true,
-        "max_products": 16,
+        "max_products": 36,
         "columns": 6,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
