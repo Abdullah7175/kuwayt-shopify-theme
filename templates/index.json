@@ -53,6 +53,56 @@
     "shop_by_department": {
       "type": "kuwayt-shop-by",
       "blocks": {
+        "tile_NgHzmF": {
+          "type": "tile",
+          "settings": {
+            "title": "Fashion & Apperal",
+            "collection": "fashion-apperal",
+            "handle": "Fashion & Apperal",
+            "link": "shopify://collections/fashion-apperal",
+            "manual_url": ""
+          }
+        },
+        "tile_hgUkFb": {
+          "type": "tile",
+          "settings": {
+            "title": "Event & Gifting",
+            "collection": "events-gifting-1",
+            "handle": "Event & Gifting",
+            "link": "shopify://collections/events-gifting-1",
+            "manual_url": ""
+          }
+        },
+        "tile_di3Yj3": {
+          "type": "tile",
+          "settings": {
+            "title": "Car Accessories",
+            "collection": "car-accessories-1",
+            "handle": "Car Accessories",
+            "link": "shopify://collections/car-accessories-1",
+            "manual_url": ""
+          }
+        },
+        "tile_t3YTRJ": {
+          "type": "tile",
+          "settings": {
+            "title": "Camera & Photography",
+            "collection": "camera-photography",
+            "handle": "Camera & Photography",
+            "link": "shopify://collections/camera-photography",
+            "manual_url": ""
+          }
+        },
+        "tile_TqKBLn": {
+          "type": "tile",
+          "settings": {
+            "title": "Books & Stationary",
+            "collection": "books-stationary",
+            "handle": "Books & Stationary",
+            "link": "shopify://collections/books-stationary",
+            "manual_url": ""
+          }
+        },
         "tile_gUic7J": {
           "type": "tile",
           "settings": {
@@ -125,6 +175,11 @@
         }
       },
       "block_order": [
+        "tile_NgHzmF",
+        "tile_hgUkFb",
+        "tile_di3Yj3",
+        "tile_t3YTRJ",
+        "tile_TqKBLn",
         "tile_gUic7J",
         "tile_4BXgEw",
         "tile_g6zKXX",
