@@ -35,6 +35,13 @@
     {% endif %}
 
     {{ content_for_header }}
+    {% if request.page_type == 'index' %}
+  <style>
+    .header__row--bottom {
+      display: none !important;
+    }
+  </style>
+{% endif %}
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
