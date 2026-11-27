@@ -17,8 +17,8 @@
         "announcement_brand": {
           "type": "_announcement",
           "settings": {
-            "text": "Delivery options are confirmed at checkout",
-            "link": "",
+            "text": "&nbsp;<strong>SELL WITH US</strong>&nbsp;",
+            "link": "shopify://collections/beauty-personal-care-1",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "600",
@@ -31,7 +31,7 @@
         "announcement_departments": {
           "type": "_announcement",
           "settings": {
-            "text": "Secure payment through Shopify checkout",
+            "text": "&nbsp;<strong>HELP & SUPPORT&nbsp;</strong>",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
