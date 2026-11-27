@@ -33,6 +33,10 @@
       "block_order": [
         "announcement_Wpjd8B"
       ],
+      "custom_css": [
+        "p {text-align: right !important; width: 100% !important; margin-left: auto !important;}",
+        ".announcement-bar__message,.announcement-bar__announcement,.announcement-bar__text {text-align: right !important; justify-content: flex-end !important; margin-left: auto !important; width: 100% !important;}"
+      ],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 2,
