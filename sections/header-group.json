@@ -14,59 +14,30 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
-        "announcement_brand": {
+        "announcement_Wpjd8B": {
           "type": "_announcement",
+          "name": "t:names.announcement",
           "settings": {
-            "text": "&nbsp;<strong>SELL WITH US</strong>&nbsp;",
-            "link": "shopify://collections/beauty-personal-care-1",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "600",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text_color": "#ffffff"
-          },
-          "blocks": {}
-        },
-        "announcement_departments": {
-          "type": "_announcement",
-          "settings": {
-            "text": "&nbsp;<strong>HELP & SUPPORT&nbsp;</strong>",
+            "text": "<strong>&nbsp;HELP & SUPPORT</strong>&nbsp;",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
-            "weight": "600",
+            "weight": "",
             "letter_spacing": "normal",
             "case": "none",
-            "text_color": "#ffffff"
-          },
-          "blocks": {}
-        },
-        "announcement_search": {
-          "type": "_announcement",
-          "settings": {
-            "text": "One catalog across every department",
-            "link": "shopify://collections/all",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "600",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text_color": "#ffffff"
+            "text_color": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_brand",
-        "announcement_departments",
-        "announcement_search"
+        "announcement_Wpjd8B"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
-        "speed": 5,
-        "section_width": "full-width",
-        "background_color": "#101418",
+        "speed": 2,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.background }}",
         "divider_width": 0,
         "divider_color": "",
         "padding-block-start": 4,
