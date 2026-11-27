@@ -900,7 +900,7 @@ body .kuwayt-newsletter__panel {
     color: #009eaa !important;
   }
 }
-}
+
 @media screen and (min-width: 750px) {
   .header__underlay {
     --color-submenu: transparent !important;
