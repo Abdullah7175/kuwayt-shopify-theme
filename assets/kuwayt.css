@@ -901,3 +901,27 @@ body .kuwayt-newsletter__panel {
   }
 }
 }
+@media screen and (min-width: 750px) {
+  .header__underlay {
+    --color-submenu: transparent !important;
+  }
+
+  .header__underlay::before,
+  .header__underlay::after {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .menu-list__submenu {
+    background: #fff !important;
+  }
+
+  .menu-list__submenu a {
+    padding: 5px 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  .menu-list__submenu .mega-menu__list {
+    gap: 0 !important;
+  }
+}
