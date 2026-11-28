@@ -1488,3 +1488,35 @@ main[data-template="index"] [data-testid="product-list"] product-price .price {
     border-radius: 5px !important;
   }
 }
+/* KUWAYT Premium Product Section */
+
+body:has(main[data-template="index"])
+[data-testid="product-list"] {
+  --gap: 18px !important;
+  --padding-block-start: 24px !important;
+  --padding-block-end: 24px !important;
+}
+
+main[data-template="index"]
+[data-testid="product-list"]
+.section-resource-list__header :is(h1, h2, .h1, .h2) {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.2 !important;
+}
+
+@media screen and (max-width: 749px) {
+  main[data-template="index"]
+  [data-testid="product-list"] {
+    --gap: 12px !important;
+    --padding-block-start: 16px !important;
+    --padding-block-end: 16px !important;
+  }
+
+  main[data-template="index"]
+  [data-testid="product-list"]
+  .section-resource-list__header :is(h1, h2, .h1, .h2) {
+    font-size: 22px !important;
+  }
+}
