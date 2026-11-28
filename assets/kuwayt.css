@@ -1260,3 +1260,28 @@ transition: none !important;
   transform: translate(-50%, -50%) !important;
   transition: none !important;
 }
+/* KUWAYT Premium Responsive Categories */
+
+.kuwayt-categories__grid {
+  display: grid !important;
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.kuwayt-category {
+  min-width: 0;
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  .kuwayt-categories__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 749px) {
+  .kuwayt-categories__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
