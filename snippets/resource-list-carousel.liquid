@@ -26,11 +26,7 @@
   if settings.icons_style != 'none'
     assign show_arrows = true
   endif
-  assign kuwayt_autoplay = false
-
-if section.id contains 'product_list_UUxXMX' and settings.layout_type == 'grid' and settings.carousel_on_mobile
-  assign kuwayt_autoplay = true
-endif
+  
 %}
 
 {% capture slides %}
@@ -52,7 +48,7 @@ endif
     icon_style: settings.icons_style,
     icon_shape: settings.icons_shape,
     auto_hide_controls: false,
-  infinite: false,
+    infinite: false,
     initial_slide: 0,
     slide_count: slide_count,
     slideshow_gutters: slideshow_gutters
