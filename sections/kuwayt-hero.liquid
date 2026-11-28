@@ -70,6 +70,7 @@
   <a href="{{ routes.all_products_collection_url }}">
     {% if section.settings.side_banner_1 != blank %}
       {{ section.settings.side_banner_1 | image_url: width: 800 | image_tag }}
+      <span class="kuwayt-banner-btn">Shop Now</span>
     {% endif %}
   </a>
 
@@ -87,6 +88,7 @@
     <a href="{{ routes.all_products_collection_url }}">
       {{ section.settings.bottom_banner | image_url: width: 1800 | image_tag }}
     </a>
+    <span class="kuwayt-banner-btn">Shop Now</span>
   {% endif %}
 </div>
 
