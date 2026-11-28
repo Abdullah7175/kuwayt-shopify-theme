@@ -11,6 +11,91 @@
   "type": "footer",
   "name": "t:names.footer",
   "sections": {
+    "kuwayt_footer_wmwnN7": {
+      "type": "kuwayt-footer",
+      "blocks": {
+        "trust_w4jWyA": {
+          "type": "trust",
+          "settings": {
+            "icon": "truck",
+            "title": "Delivery",
+            "subtitle": "Shop from home"
+          }
+        },
+        "trust_fgfJTz": {
+          "type": "trust",
+          "settings": {
+            "icon": "shield",
+            "title": "Secure Shopping",
+            "subtitle": "Shop with confidence"
+          }
+        },
+        "trust_Lr6rLz": {
+          "type": "trust",
+          "settings": {
+            "icon": "quality",
+            "title": "Quality Products",
+            "subtitle": "Discover our collection"
+          }
+        },
+        "trust_VK9VMx": {
+          "type": "trust",
+          "settings": {
+            "icon": "support",
+            "title": "Customer Support",
+            "subtitle": "Here to help you"
+          }
+        },
+        "menu_PGTjne": {
+          "type": "menu",
+          "settings": {
+            "title": "Customer Care",
+            "menu": ""
+          }
+        },
+        "menu_CkgVCK": {
+          "type": "menu",
+          "settings": {
+            "title": "Explore KUWAYT",
+            "menu": ""
+          }
+        }
+      },
+      "block_order": [
+        "trust_w4jWyA",
+        "trust_fgfJTz",
+        "trust_Lr6rLz",
+        "trust_VK9VMx",
+        "menu_PGTjne",
+        "menu_CkgVCK"
+      ],
+      "name": "KUWAYT Premium Footer",
+      "settings": {
+        "bg_color": "#002E35",
+        "accent_color": "#FFD126",
+        "text_color": "#E0EEEE",
+        "about_text": "<p>KUWAYT – Your One Stop for Everything. Discover quality products, exciting deals and everyday essentials. Shop smarter and enjoy a seamless online shopping experience across Pakistan.</p>",
+        "show_trust": true,
+        "show_newsletter": true,
+        "news_title": "Join the KUWAYT Family!",
+        "news_text": "Be the first to discover exclusive deals, new arrivals and exciting offers.",
+        "contact_heading": "Get In Touch",
+        "email": "",
+        "phone": "",
+        "location": "Pakistan",
+        "whatsapp": "",
+        "whatsapp_text": "Chat with our team",
+        "facebook": "",
+        "instagram": "",
+        "youtube": "",
+        "tiktok": "",
+        "show_payments": true,
+        "show_cod": true,
+        "show_easypaisa": true,
+        "show_jazzcash": true,
+        "bottom_text": "Discover More. Shop Smarter. Live Better."
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -25,7 +110,16 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          }
+          },
+          "blocks": {}
+        },
+        "store_links": {
+          "type": "kuwayt-store-links",
+          "settings": {
+            "service_heading": "Customer service",
+            "department_heading": "Departments"
+          },
+          "blocks": {}
         },
         "group_wErUQf": {
           "type": "group",
@@ -45,6 +139,7 @@
             "height": "fit",
             "custom_height": 100,
             "background_media": "none",
+            "background_color": "",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
@@ -54,6 +149,7 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
+            "border_color": "",
             "border_radius": 0,
             "link": "",
             "open_in_new_tab": false,
@@ -79,6 +175,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "text_color": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -104,6 +201,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "text_color": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -121,6 +219,7 @@
                 "width": "fill",
                 "custom_width": 100,
                 "heading": "",
+                "heading_text_color": "",
                 "heading_preset": "h3",
                 "border_style": "all",
                 "input_style": "custom",
@@ -131,9 +230,10 @@
                 "input_border_color": "#ffffff",
                 "input_type_preset": "paragraph",
                 "style_class": "button-custom",
-                "custom_button_background": "#FFE45C",
+                "custom_button_background": "#ffe45c",
                 "custom_button_text": "#202124",
-                "custom_button_border": "#FFE45C",
+                "custom_button_border": "#ffe45c",
+                "link_text_color": "",
                 "display_type": "text",
                 "label": "Sign up",
                 "integrated_button": false,
@@ -161,13 +261,16 @@
             "show_as_accordion": false,
             "accordion_icon": "plus",
             "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "",
             "heading_preset": "paragraph",
             "link_preset": "paragraph",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          }
+          },
+          "blocks": {}
         },
         "menu_main": {
           "type": "menu",
@@ -178,20 +281,16 @@
             "show_as_accordion": false,
             "accordion_icon": "plus",
             "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "",
             "heading_preset": "paragraph",
             "link_preset": "paragraph",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          }
-        },
-        "store_links": {
-          "type": "kuwayt-store-links",
-          "settings": {
-            "service_heading": "Customer service",
-            "department_heading": "Departments"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -201,6 +300,7 @@
         "menu_footer",
         "menu_main"
       ],
+      "disabled": true,
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
@@ -217,26 +317,40 @@
           "type": "footer-copyright",
           "settings": {
             "show_powered_by": true,
+            "text_color": "",
             "font_size": "0.75rem",
             "case": "none"
-          }
+          },
+          "blocks": {}
         },
         "policy_list": {
           "type": "footer-policy-list",
           "settings": {
+            "text_color": "",
             "font_size": "0.75rem",
             "case": "none"
-          }
+          },
+          "blocks": {}
         },
         "social_icons": {
           "type": "social-links",
           "settings": {
+            "icon_color": "",
             "facebook_url": "",
             "instagram_url": "",
             "youtube_url": "",
             "tiktok_url": "",
-            "twitter_url": ""
-          }
+            "twitter_url": "",
+            "threads_url": "",
+            "linkedin_url": "",
+            "bluesky_url": "",
+            "snapchat_url": "",
+            "pinterest_url": "",
+            "tumblr_url": "",
+            "vimeo_url": "",
+            "custom_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -249,12 +363,14 @@
         "gap": 24,
         "background_color": "#202124",
         "divider_thickness": 1,
+        "divider_color": "",
         "padding-block-start": 12,
         "padding-block-end": 16
       }
     }
   },
   "order": [
+    "kuwayt_footer_wmwnN7",
     "footer",
     "utilities"
   ]
