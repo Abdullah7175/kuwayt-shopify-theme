@@ -2096,3 +2096,54 @@ main[data-template="index"]
   }
 
 }
+/* KUWAYT Premium Mobile Banner Layout */
+
+@media screen and (max-width: 749px) {
+
+  .kuwayt-hero-section .kuwayt-side-banners {
+    display: none !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-banner-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 8px 0 12px !important;
+    padding: 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner a {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner
+  .kuwayt-banner-btn {
+    display: none !important;
+  }
+
+}
