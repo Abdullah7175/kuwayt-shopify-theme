@@ -3081,3 +3081,17 @@ button[type="submit"] {
     transform: scale(1.05);
   }
 }
+/* KUWAYT FINAL SEARCH CORNER FIX */
+
+#header-group .kuwayt-header-search.color-custom-popover {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+}
+
+#header-group .kuwayt-header-search
+form:has(input[type="search"]) {
+  background: #ffffff !important;
+  border-radius: 50px !important;
+}
