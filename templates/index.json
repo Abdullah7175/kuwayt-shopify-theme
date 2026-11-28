@@ -44,6 +44,8 @@
       ],
       "custom_css": [],
       "settings": {
+        "side_banner_link": "",
+        "bottom_banner_link": "",
         "side_banner_1": "shopify://shop_images/Kuwayt_Glow-Up_Beauty_Essentials.png",
         "bottom_banner": "shopify://shop_images/KUWAYT_Blessed_Friday_Sale_Banner.png",
         "autoplay": true,
@@ -1781,6 +1783,7 @@
           ]
         }
       },
+      "disabled": true,
       "settings": {
         "heading": "Recently viewed",
         "max_products": 4
