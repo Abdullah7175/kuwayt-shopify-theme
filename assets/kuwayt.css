@@ -1516,3 +1516,51 @@ main[data-template="index"]
     font-size: 22px !important;
   }
 }
+/* KUWAYT Premium Mobile Banner Fix */
+
+@media screen and (max-width: 749px) {
+
+  .kuwayt-hero-section {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .kuwayt-hero-section .button {
+    font-size: 11px !important;
+    padding: 8px 14px !important;
+    min-height: 32px !important;
+    min-width: 0 !important;
+    border-radius: 20px !important;
+    width: auto !important;
+    white-space: nowrap !important;
+  }
+
+  .kuwayt-bottom-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    position: relative;
+  }
+
+  .kuwayt-bottom-banner img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .kuwayt-bottom-banner .kuwayt-banner-btn,
+  .kuwayt-bottom-banner a:hover .kuwayt-banner-btn {
+    left: auto !important;
+    right: 8px !important;
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    font-size: 10px !important;
+    padding: 6px 10px !important;
+    min-height: 28px !important;
+    min-width: 0 !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    border-radius: 20px !important;
+  }
+}
