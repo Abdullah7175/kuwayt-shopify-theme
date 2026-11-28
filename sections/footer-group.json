@@ -363,6 +363,7 @@
         "policy_list",
         "social_icons"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "page-width",
         "gap": 24,
