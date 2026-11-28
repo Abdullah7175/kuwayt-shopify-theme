@@ -53,7 +53,7 @@
         "eyebrow": "One stop for all",
         "heading": "Everything you need, in one store.",
         "text": "<p>Shop electronics, fashion, home, beauty, fitness and everyday essentials. Search the catalog, browse a department, and check out once.</p>",
-        "primary_label": "Shop now",
+        "primary_label": "",
         "primary_link": "shopify://collections/all",
         "image_alt": "KUWAYT, one stop for all"
       }
@@ -1092,6 +1092,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Best sellers",
       "settings": {
         "collection": "best-sellers",
@@ -1285,6 +1286,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Special offers",
       "settings": {
         "collection": "special-offers",
@@ -1478,6 +1480,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "New arrivals",
       "settings": {
         "collection": "new-arrivals",
@@ -1671,6 +1674,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Trending products",
       "settings": {
         "collection": "trending",

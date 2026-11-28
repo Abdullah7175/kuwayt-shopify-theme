@@ -49,14 +49,14 @@
         "menu_PGTjne": {
           "type": "menu",
           "settings": {
-            "title": "Customer Care",
+            "title": "Quick Links",
             "menu": ""
           }
         },
         "menu_CkgVCK": {
           "type": "menu",
           "settings": {
-            "title": "Explore KUWAYT",
+            "title": "Customer Support",
             "menu": ""
           }
         }
@@ -71,11 +71,11 @@
       ],
       "name": "KUWAYT Premium Footer",
       "settings": {
-        "bg_color": "#002E35",
-        "accent_color": "#FFD126",
-        "text_color": "#E0EEEE",
+        "bg_color": "#002e35",
+        "accent_color": "#ffd126",
+        "text_color": "#e0eeee",
         "about_text": "<p>KUWAYT – Your One Stop for Everything. Discover quality products, exciting deals and everyday essentials. Shop smarter and enjoy a seamless online shopping experience across Pakistan.</p>",
-        "show_trust": true,
+        "show_trust": false,
         "show_newsletter": true,
         "news_title": "Join the KUWAYT Family!",
         "news_text": "Be the first to discover exclusive deals, new arrivals and exciting offers.",
@@ -85,7 +85,7 @@
         "location": "Pakistan",
         "whatsapp": "",
         "whatsapp_text": "Chat with our team",
-        "facebook": "",
+        "facebook": "https://www.facebook.com/share/1CNNvFo1mn/",
         "instagram": "",
         "youtube": "",
         "tiktok": "",
