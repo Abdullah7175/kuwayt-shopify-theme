@@ -67,7 +67,7 @@
 </kuwayt-hero>
 <div class="kuwayt-side-banners">
 
-  <a href="{{ routes.all_products_collection_url }}">
+  <a href="{{ section.settings.side_banner_link | default: routes.all_products_collection_url }}">
     {% if section.settings.side_banner_1 != blank %}
       {{ section.settings.side_banner_1 | image_url: width: 800 | image_tag }}
       <span class="kuwayt-banner-btn">Shop Now</span>
