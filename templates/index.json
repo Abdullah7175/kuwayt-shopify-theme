@@ -44,6 +44,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "bottom_banner": "shopify://shop_images/New_Year_Beauty_and_Health_Sale.png",
         "autoplay": true,
         "speed": 6,
         "eyebrow": "One stop for all",
