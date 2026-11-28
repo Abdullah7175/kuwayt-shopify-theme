@@ -925,3 +925,25 @@ body .kuwayt-newsletter__panel {
     gap: 0 !important;
   }
 }
+@media screen and (min-width: 750px) {
+  .header__row--bottom
+  .menu-list__link[href="/collections"]
+  .menu-list__link-title::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #009eaa;
+    border-bottom: 2px solid #009eaa;
+    transform: rotate(45deg);
+    margin-left: 12px;
+    vertical-align: 3px;
+    transition: transform 0.2s ease;
+  }
+
+  .menu-list__list-item:hover
+  .menu-list__link[href="/collections"]
+  .menu-list__link-title::after {
+    transform: rotate(225deg);
+  }
+}
