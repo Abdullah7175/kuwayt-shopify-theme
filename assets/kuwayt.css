@@ -2597,93 +2597,80 @@ margin: 10px 0 0 !important;
     }
   }
 }
-/* KUWAYT SIGNATURE LUXURY HEADER */
-
-#header-group {
-  --kw-gold: #FFD126;
-  --kw-teal: #008C95;
-  --kw-dark: #002E35;
-}
-
-/* Luxury glass background */
+/* KUWAYT VVIP DARK GOLD HEADER */
 
 #header-group .header-section {
   background: linear-gradient(
-    120deg,
-    rgba(255,255,255,.98),
-    rgba(246,252,252,.98),
-    rgba(255,255,255,.98)
+    115deg,
+    #002E35,
+    #064952,
+    #00636C,
+    #002E35
   ) !important;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  box-shadow:
-    0 5px 25px rgba(0,46,53,.08),
-    inset 0 -1px 0 rgba(0,140,149,.10);
-
-  border-bottom: 2px solid transparent;
-
-  border-image: linear-gradient(
-    90deg,
-    #ffffff,
-    #FFD126,
-    #008C95,
-    #FFD126,
-    #ffffff
-  ) 1;
+  border-bottom: 2px solid #FFD126 !important;
+  box-shadow: 0 6px 24px rgba(0,46,53,.20);
 }
 
-/* Premium rounded search bar */
+/* Header rows */
 
-#header-group form:has(input[type="search"]) {
-  border-radius: 50px !important;
-
+#header-group .header__row {
   background: linear-gradient(
-    135deg,
-    #ffffff,
-    #f1f9f9
+    115deg,
+    #002E35,
+    #064952,
+    #00636C,
+    #002E35
   ) !important;
 
-  border-color: #008C95 !important;
+  border-color: transparent !important;
+}
+
+/* Original logo premium white plate */
+
+#header-group .header-logo img {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 7px;
+  box-sizing: border-box;
+  transition: transform .3s ease;
+}
+
+/* Luxury search bar */
+
+#header-group form:has(input[type="search"]) {
+  background: #ffffff !important;
+  border: 2px solid #FFD126 !important;
+  border-radius: 50px !important;
 
   box-shadow:
-    0 4px 15px rgba(0,140,149,.08),
-    inset 0 1px 4px rgba(0,46,53,.03);
+    0 4px 18px rgba(0,0,0,.12);
 
-  transition:
-    box-shadow .3s ease,
-    border-color .3s ease;
+  transition: box-shadow .3s ease;
 }
 
 #header-group input[type="search"] {
-  background: transparent !important;
+  background: #ffffff !important;
   color: #002E35 !important;
-  font-weight: 500;
-  font-size: 15px;
   border-radius: 50px !important;
+  font-weight: 500;
 }
 
 #header-group input[type="search"]::placeholder {
-  color: #78898D !important;
+  color: #76868B !important;
   opacity: 1;
 }
 
-/* Search focus luxury glow */
-
 #header-group form:has(input[type="search"]):focus-within {
-  border-color: #D5B025 !important;
-
   box-shadow:
-    0 0 0 3px rgba(255,209,38,.18),
-    0 6px 20px rgba(0,140,149,.10);
+    0 0 0 4px rgba(255,209,38,.18),
+    0 5px 20px rgba(0,0,0,.15);
 }
 
-/* Golden search button */
+/* Golden gradient search button */
 
 #header-group form:has(input[type="search"])
 button[type="submit"] {
-
   position: relative;
   overflow: hidden;
 
@@ -2691,35 +2678,32 @@ button[type="submit"] {
     135deg,
     #FFF09B,
     #FFD126,
-    #FFBC00
+    #FFB800
   ) !important;
 
   color: #002E35 !important;
   border-radius: 50px !important;
-
-  box-shadow: 0 3px 12px rgba(255,188,0,.18);
 
   transition:
     transform .3s ease,
     box-shadow .3s ease;
 }
 
-/* Moving luxury shine */
+/* Animated golden shine */
 
 #header-group form:has(input[type="search"])
 button[type="submit"]::before {
-
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
-  width: 45%;
+  width: 50%;
   height: 100%;
 
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255,255,255,.7),
+    rgba(255,255,255,.75),
     transparent
   );
 
@@ -2728,65 +2712,52 @@ button[type="submit"]::before {
   pointer-events: none;
 }
 
-/* Account and cart luxury icons */
+/* Premium account and cart icons */
 
-#header-group :is(.header-actions,header-actions)
-:is(a,button):has(svg) {
+#header-group :is(
+  .header-actions,
+  header-actions
+) :is(a,button):has(svg) {
 
+  background: rgba(255,255,255,.08) !important;
+  color: #FFD126 !important;
   border-radius: 50% !important;
 
-  background: linear-gradient(
-    145deg,
-    #ffffff,
-    #e8f5f5
-  );
-
-  color: #002E35;
-
   box-shadow:
-    0 3px 10px rgba(0,46,53,.06);
+    inset 0 0 0 1px rgba(255,209,38,.25);
 
   transition:
     transform .3s ease,
     box-shadow .3s ease;
 }
 
-/* Premium icon finishing */
-
-#header-group :is(.header-actions,header-actions)
-:is(a,button) svg {
-
-  color: #007F88;
-
-  transition: transform .3s ease;
+#header-group :is(
+  .header-actions,
+  header-actions,
+  .header__icon--menu
+) svg {
+  color: #FFD126 !important;
 }
 
-/* Logo animation */
+/* Cart count */
 
-#header-group .header-logo img {
-  transition:
-    transform .35s ease,
-    filter .35s ease;
+#header-group .cart-bubble {
+  background: #FFD126 !important;
+  color: #002E35 !important;
 }
 
-/* Desktop luxury hover */
+/* Smooth premium hover */
 
 @media (hover: hover) and (pointer: fine) {
 
   #header-group .header-logo:hover img {
     transform: scale(1.04);
-    filter: drop-shadow(
-      0 3px 7px rgba(255,188,0,.18)
-    );
   }
 
   #header-group form:has(input[type="search"])
   button[type="submit"]:hover {
-
-    transform: scale(1.04);
-
-    box-shadow:
-      0 6px 18px rgba(255,188,0,.28);
+    transform: scale(1.03);
+    box-shadow: 0 5px 18px rgba(255,209,38,.3);
   }
 
   #header-group form:has(input[type="search"])
@@ -2797,58 +2768,45 @@ button[type="submit"]::before {
   #header-group :is(.header-actions,header-actions)
   :is(a,button):has(svg):hover {
 
-    transform: translateY(-3px) scale(1.08);
+    transform: translateY(-3px) scale(1.07);
 
     box-shadow:
-      0 7px 18px rgba(0,140,149,.16);
-  }
-
-  #header-group :is(.header-actions,header-actions)
-  :is(a,button):hover svg {
-    transform: scale(1.08);
+      0 5px 18px rgba(255,209,38,.18),
+      inset 0 0 0 1px #FFD126;
   }
 }
 
-/* Mobile responsive finishing */
+/* Mobile premium finishing */
 
 @media screen and (max-width: 749px) {
 
-  #header-group .header-section {
-    box-shadow: 0 4px 18px rgba(0,46,53,.08);
+  #header-group .header-logo img {
+    padding: 4px;
+    border-radius: 8px;
   }
 
   #header-group input[type="search"] {
     font-size: 16px !important;
   }
 
-  #header-group form:has(input[type="search"]) {
-    border-radius: 30px !important;
+  #header-group .header-section {
+    box-shadow: 0 4px 16px rgba(0,46,53,.15);
   }
 
   #header-group :is(.header-actions,header-actions)
   :is(a,button):active {
-    transform: scale(.94);
+    transform: scale(.95);
   }
 }
 
-/* Keyboard accessibility */
-
-#header-group :is(a,button):focus-visible {
-  outline: 2px solid #008C95;
-  outline-offset: 3px;
-}
-
-/* Reduced motion support */
+/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
-
   #header-group .header-logo img,
   #header-group :is(.header-actions,header-actions)
   :is(a,button),
-  #header-group :is(.header-actions,header-actions) svg,
   #header-group form:has(input[type="search"])
   button[type="submit"] {
-
     transition: none !important;
     transform: none !important;
   }
