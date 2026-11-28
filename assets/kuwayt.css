@@ -1792,3 +1792,147 @@ main[data-template="index"]
     font-weight: 700 !important;
   }
 }
+/* KUWAYT Premium Mobile Banner Fix */
+
+@media screen and (max-width: 749px) {
+
+  .kuwayt-hero-section .kuwayt-home-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 12px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-banner-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  /* Main Hero Banner */
+
+  .kuwayt-hero-section .kuwayt-hero,
+  .kuwayt-hero-section .kuwayt-hero__viewport {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__slide {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 2.5 / 1 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__media {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__button {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 30px !important;
+    padding: 7px 15px !important;
+    font-size: 11px !important;
+    border-radius: 30px !important;
+    align-self: flex-start !important;
+  }
+
+  /* Side Banners */
+
+  .kuwayt-hero-section .kuwayt-side-banners {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners > a {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners > a:not(:has(img)) {
+    display: none !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners > a:only-child,
+  .kuwayt-hero-section .kuwayt-side-banners > a:has(img):not(:has(~ a img)):first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners .kuwayt-banner-btn {
+    position: absolute !important;
+    left: 50% !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: 10px !important;
+    transform: translateX(-50%) !important;
+    width: max-content !important;
+    max-width: 90% !important;
+    min-width: 0 !important;
+    padding: 7px 13px !important;
+    font-size: 11px !important;
+    border-radius: 30px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Bottom Sale Banner */
+
+  .kuwayt-hero-section .kuwayt-bottom-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 10px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner > a {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner .kuwayt-banner-btn {
+    display: none !important;
+  }
+
+}
