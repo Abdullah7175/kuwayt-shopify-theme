@@ -947,3 +947,40 @@ body .kuwayt-newsletter__panel {
     transform: rotate(225deg);
   }
 }
+/* KUWAYT Responsive Premium Banner */
+
+.kuwayt-hero {
+  display: block !important;
+  width: calc(100% - 48px) !important;
+  max-width: 1440px !important;
+  margin: 16px auto !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.kuwayt-hero__viewport {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 3 / 1;
+  border-radius: 10px;
+}
+
+.kuwayt-hero__media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+@media screen and (max-width: 749px) {
+  .kuwayt-hero {
+    width: calc(100% - 16px) !important;
+    margin: 8px auto !important;
+    border-radius: 6px !important;
+  }
+
+  .kuwayt-hero__viewport {
+    aspect-ratio: 16 / 9;
+    min-height: 0 !important;
+  }
+}
