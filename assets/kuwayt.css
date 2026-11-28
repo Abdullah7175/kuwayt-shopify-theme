@@ -1227,6 +1227,10 @@ body .kuwayt-newsletter__panel {
 .kuwayt-bottom-banner a:hover .kuwayt-banner-btn {
   background: linear-gradient(135deg, #FFE66D, #FFBC00) !important;
   color: #111111 !important;
-  transform: scale(1.04);
+transition: none !important;
   opacity: 1 !important;
+}
+.kuwayt-side-banners .kuwayt-banner-btn,
+.kuwayt-bottom-banner .kuwayt-banner-btn {
+  display: none !important;
 }
