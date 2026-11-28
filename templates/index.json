@@ -26,11 +26,13 @@
         "slide_two": {
           "type": "slide",
           "settings": {
-            "eyebrow": "KUWAYT",
-            "heading": "Find it faster.",
-            "text": "Search by product, brand or category, then check out once.",
+            "eyebrow": "",
+            "heading": "",
+            "text": "",
             "button_label": "Shop now",
             "button_link": "shopify://collections/all",
+            "image": "shopify://shop_images/Kuwayt_200W_Car_Heater_Banner.png",
+            "mobile_image": "shopify://shop_images/Kuwayt_200W_Car_Heater_Banner.png",
             "alt": ""
           }
         }
