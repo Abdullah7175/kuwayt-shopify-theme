@@ -1334,3 +1334,39 @@ transition: none !important;
     gap: 8px !important;
   }
 }
+/* KUWAYT Responsive Homepage Categories */
+
+.kuwayt-shop-by .kuwayt-shop-by__row {
+  display: grid !important;
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  grid-auto-flow: row !important;
+}
+
+.kuwayt-shop-by .kuwayt-shop-by__tile {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  border-radius: 14px !important;
+  height: 100%;
+}
+
+.kuwayt-shop-by .kuwayt-shop-by__label {
+  font-size: 13px !important;
+  white-space: normal !important;
+  text-align: center !important;
+  overflow-wrap: anywhere;
+  padding: 10px 5px !important;
+}
+
+@media (max-width: 1023px) {
+  .kuwayt-shop-by .kuwayt-shop-by__row {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 749px) {
+  .kuwayt-shop-by .kuwayt-shop-by__row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
