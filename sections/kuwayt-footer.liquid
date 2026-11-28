@@ -1,0 +1,996 @@
+
+{% style %}
+#kuwayt-footer-{{ section.id }} {
+  --kf-bg: {{ section.settings.bg_color }};
+  --kf-accent: {{ section.settings.accent_color }};
+  --kf-text: {{ section.settings.text_color }};
+  background: var(--kf-bg);
+  color: var(--kf-text);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+#kuwayt-footer-{{ section.id }} * {
+  box-sizing: border-box;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Premium trust cards */
+
+#kuwayt-footer-{{ section.id }} .kf-trust {
+  background: #f1f7f7;
+  padding: 28px 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-trust-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 18px;
+  background: #ffffff;
+  border: 1px solid #e0ebeb;
+  border-radius: 18px;
+  color: #003d43;
+  box-shadow: 0 5px 20px rgba(0,0,0,.04);
+  transition: transform .25s, box-shadow .25s;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+#kuwayt-footer-{{ section.id }} .kf-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 14px;
+  background: #e2f3f3;
+  color: #00848d;
+  display: grid;
+  place-items: center;
+}
+
+#kuwayt-footer-{{ section.id }} svg {
+  width: 25px;
+  height: 25px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-trust-card strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-trust-card small {
+  display: block;
+  font-size: 12px;
+  color: #637779;
+  margin-top: 4px;
+}
+
+/* Newsletter */
+
+#kuwayt-footer-{{ section.id }} .kf-newsletter {
+  background: linear-gradient(115deg, #00565e, #00929b);
+  padding: 35px 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-title {
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-text {
+  color: #e1f5f5;
+  font-size: 14px;
+  margin: 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-form {
+  display: flex;
+  padding: 5px;
+  background: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.1);
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-form input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: #222222;
+  padding: 12px 18px;
+  outline: none;
+  font-size: 14px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-form button {
+  background: var(--kf-accent);
+  color: #102c30;
+  border: 0;
+  border-radius: 50px;
+  padding: 13px 25px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-news-form button:hover {
+  filter: brightness(1.08);
+}
+
+/* Main luxury footer */
+
+#kuwayt-footer-{{ section.id }} .kf-main {
+  padding: 55px 0 30px;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(0,150,160,.15),
+    transparent 55%
+  );
+}
+
+#kuwayt-footer-{{ section.id }} .kf-columns {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1.15fr;
+  gap: 35px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-logo {
+  display: block;
+  max-width: 210px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-brand-name {
+  color: var(--kf-accent);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0 0 15px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-about {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: .85;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-heading {
+  font-size: 17px;
+  font-weight: 750;
+  color: var(--kf-accent);
+  margin: 0 0 22px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-heading::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--kf-accent);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-links li {
+  margin-bottom: 13px;
+}
+
+#kuwayt-footer-{{ section.id }} a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-links a {
+  font-size: 14px;
+  opacity: .85;
+  display: inline-block;
+  transition: color .2s, transform .2s;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-links a:hover {
+  color: var(--kf-accent);
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+#kuwayt-footer-{{ section.id }} .kf-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-contact svg {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  color: var(--kf-accent);
+}
+
+/* WhatsApp premium card */
+
+#kuwayt-footer-{{ section.id }} .kf-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(37,211,102,.1);
+  border: 1px solid rgba(37,211,102,.35);
+  border-radius: 14px;
+  padding: 15px;
+  margin-top: 20px;
+  transition: background .2s;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-whatsapp:hover {
+  background: rgba(37,211,102,.2);
+}
+
+#kuwayt-footer-{{ section.id }} .kf-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  color: #25d366;
+  flex-shrink: 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-whatsapp strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-whatsapp small {
+  font-size: 11px;
+  opacity: .8;
+}
+
+/* Social media */
+
+#kuwayt-footer-{{ section.id }} .kf-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  font-weight: 800;
+  transition: all .25s;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-social a:hover {
+  background: var(--kf-accent);
+  color: #00353b;
+  transform: translateY(-3px);
+}
+
+/* Payment and bottom bar */
+
+#kuwayt-footer-{{ section.id }} .kf-payments {
+  border-top: 1px solid rgba(255,255,255,.13);
+  margin-top: 35px;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-payment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-payment-list svg {
+  width: 42px;
+  height: 28px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-payment-badge {
+  background: #ffffff;
+  color: #003c43;
+  border-radius: 5px;
+  padding: 7px 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-bottom {
+  background: rgba(0,0,0,.25);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 20px 0;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+}
+
+#kuwayt-footer-{{ section.id }} .kf-bottom-tag {
+  color: var(--kf-accent);
+}
+
+/* Tablet and laptop */
+
+@media screen and (max-width: 1024px) {
+  #kuwayt-footer-{{ section.id }} .kf-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile premium responsive layout */
+
+@media screen and (max-width: 749px) {
+  #kuwayt-footer-{{ section.id }} .kf-wrap {
+    padding: 0 15px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust {
+    padding: 18px 0;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust-grid {
+    gap: 10px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 8px;
+    gap: 8px;
+    border-radius: 14px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust-card strong {
+    font-size: 12px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-trust-card small {
+    font-size: 10px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-newsletter {
+    padding: 25px 0;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-news-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-news-form button {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-news-form input {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-main {
+    padding: 30px 0 22px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 15px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-brand,
+  #kuwayt-footer-{{ section.id }} .kf-support {
+    grid-column: 1 / -1;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-brand {
+    text-align: center;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-logo {
+    max-width: 180px;
+    margin: 0 auto 15px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-social {
+    justify-content: center;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-heading {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-links a {
+    font-size: 12px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-about {
+    font-size: 13px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-payments {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+    gap: 12px;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-payment-list {
+    justify-content: center;
+  }
+
+  #kuwayt-footer-{{ section.id }} .kf-bottom-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 7px;
+  }
+}
+{% endstyle %}
+
+<div id="kuwayt-footer-{{ section.id }}">
+
+  {% if section.settings.show_trust %}
+    <div class="kf-trust">
+      <div class="kf-wrap kf-trust-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'trust' %}
+            <div class="kf-trust-card" {{ block.shopify_attributes }}>
+              <div class="kf-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  {% case block.settings.icon %}
+                    {% when 'truck' %}
+                      <path d="M1 4h15v13H1zM16 9h4l3 4v4h-7"/>
+                      <circle cx="5.5" cy="18" r="2.5"/>
+                      <circle cx="18.5" cy="18" r="2.5"/>
+                    {% when 'shield' %}
+                      <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    {% when 'quality' %}
+                      <circle cx="12" cy="9" r="6"/>
+                      <path d="m9 9 2 2 4-4M8 14l-2 8 6-3 6 3-2-8"/>
+                    {% else %}
+                      <path d="M3 14v-3a9 9 0 0 1 18 0v3M3 13h3v7H3zM18 13h3v7h-3zM18 20c0 2-3 2-6 2"/>
+                  {% endcase %}
+                </svg>
+              </div>
+              <div>
+                <strong>{{ block.settings.title | escape }}</strong>
+                <small>{{ block.settings.subtitle | escape }}</small>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.settings.show_newsletter %}
+    <div class="kf-newsletter">
+      <div class="kf-wrap kf-news-grid">
+        <div>
+          <h2 class="kf-news-title">
+            {{ section.settings.news_title | escape }}
+          </h2>
+          <p class="kf-news-text">
+            {{ section.settings.news_text | escape }}
+          </p>
+        </div>
+
+        <div>
+          {% assign newsletter_id = 'KuwaytNewsletter-' | append: section.id %}
+          {% form 'customer', id: newsletter_id %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+
+            <div class="kf-news-form">
+              <input
+                type="email"
+                name="contact[email]"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                autocomplete="email"
+                required
+              >
+              <button type="submit">Subscribe →</button>
+            </div>
+
+            {% if form.posted_successfully? %}
+              <p role="status">Thank you for subscribing!</p>
+            {% endif %}
+
+            {% if form.errors %}
+              {{ form.errors | default_errors }}
+            {% endif %}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="kf-main">
+    <div class="kf-wrap">
+      <div class="kf-columns">
+
+        <div class="kf-brand">
+          <a href="{{ routes.root_url }}">
+            {% if section.settings.logo != blank %}
+              {{ section.settings.logo | image_url: width: 500 | image_tag: class: 'kf-logo', loading: 'lazy' }}
+            {% else %}
+              <div class="kf-brand-name">KUWAYT</div>
+            {% endif %}
+          </a>
+
+          <div class="kf-about">
+            {{ section.settings.about_text }}
+          </div>
+
+          <div class="kf-social">
+            {% if section.settings.facebook != blank %}
+              <a href="{{ section.settings.facebook }}" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+            {% endif %}
+
+            {% if section.settings.instagram != blank %}
+              <a href="{{ section.settings.instagram }}" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+            {% endif %}
+
+            {% if section.settings.youtube != blank %}
+              <a href="{{ section.settings.youtube }}" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+            {% endif %}
+
+            {% if section.settings.tiktok != blank %}
+              <a href="{{ section.settings.tiktok }}" aria-label="TikTok" target="_blank" rel="noopener">♪</a>
+            {% endif %}
+          </div>
+        </div>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'menu' %}
+            <div class="kf-menu" {{ block.shopify_attributes }}>
+              <h3 class="kf-heading">
+                {{ block.settings.title | escape }}
+              </h3>
+
+              <ul class="kf-links">
+                {% for link in block.settings.menu.links %}
+                  <li>
+                    <a href="{{ link.url }}">› {{ link.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="kf-support">
+          <h3 class="kf-heading">
+            {{ section.settings.contact_heading | escape }}
+          </h3>
+
+          {% if section.settings.email != blank %}
+            <a class="kf-contact" href="mailto:{{ section.settings.email | escape }}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="3"/>
+                <path d="m2 6 10 7L22 6"/>
+              </svg>
+              {{ section.settings.email | escape }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.phone != blank %}
+            <a class="kf-contact" href="tel:{{ section.settings.phone | escape }}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.7 3.1a2 2 0 0 1-.6 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.6l3.1.7a2 2 0 0 1 1.7 2z"/>
+              </svg>
+              {{ section.settings.phone | escape }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.location != blank %}
+            <div class="kf-contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              {{ section.settings.location | escape }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.whatsapp != blank %}
+            {% assign wa_number = section.settings.whatsapp | remove: '+' | remove: ' ' | remove: '-' | remove: '(' | remove: ')' %}
+            <a class="kf-whatsapp"
+               href="https://wa.me/{{ wa_number | escape }}"
+               target="_blank"
+               rel="noopener">
+
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.7-4.5A9 9 0 1 1 21 11.5z"/>
+                <path d="M8 7c-2 3 3 8 6 8l2-2-3-1-1 1-2-2 1-1-1-3z"/>
+              </svg>
+
+              <div>
+                <strong>WhatsApp Support</strong>
+                <small>{{ section.settings.whatsapp_text | escape }}</small>
+              </div>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.show_payments %}
+        <div class="kf-payments">
+          <strong>Payment Options</strong>
+
+          <div class="kf-payment-list">
+            {% for type in shop.enabled_payment_types %}
+              {{ type | payment_type_svg_tag }}
+            {% endfor %}
+
+            {% if section.settings.show_cod %}
+              <span class="kf-payment-badge">Cash on Delivery</span>
+            {% endif %}
+
+            {% if section.settings.show_easypaisa %}
+              <span class="kf-payment-badge">easypaisa</span>
+            {% endif %}
+
+            {% if section.settings.show_jazzcash %}
+              <span class="kf-payment-badge">JazzCash</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="kf-bottom">
+    <div class="kf-wrap kf-bottom-row">
+      <span>
+        © {{ 'now' | date: '%Y' }} {{ shop.name | escape }}. All Rights Reserved.
+      </span>
+      <span class="kf-bottom-tag">
+        {{ section.settings.bottom_text | escape }}
+      </span>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KUWAYT Premium Footer",
+  "tag": "section",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand and colors"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Footer background",
+      "default": "#002E35"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Golden accent",
+      "default": "#FFD126"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#E0EEEE"
+    },
+    {
+      "type": "richtext",
+      "id": "about_text",
+      "label": "About KUWAYT",
+      "default": "<p>One Stop For All. Discover everyday essentials, exciting products and a smarter shopping experience with KUWAYT.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Trust cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trust",
+      "label": "Show trust cards",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "news_title",
+      "label": "Newsletter heading",
+      "default": "Unlock Exclusive Offers!"
+    },
+    {
+      "type": "text",
+      "id": "news_text",
+      "label": "Newsletter description",
+      "default": "Discover new arrivals, special deals and exciting updates."
+    },
+    {
+      "type": "header",
+      "content": "Customer support"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "Contact heading",
+      "default": "Get In Touch"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Support email"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number"
+    },
+    {
+      "type": "text",
+      "id": "location",
+      "label": "Business location",
+      "default": "Pakistan"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp",
+      "label": "WhatsApp number with country code",
+      "info": "Use international format, for example 923001234567."
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_text",
+      "label": "WhatsApp description",
+      "default": "Chat with our team"
+    },
+    {
+      "type": "header",
+      "content": "Social media"
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "youtube",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "url",
+      "id": "tiktok",
+      "label": "TikTok URL"
+    },
+    {
+      "type": "header",
+      "content": "Payment methods"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payments",
+      "label": "Show payment options",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cod",
+      "label": "Show Cash on Delivery",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_easypaisa",
+      "label": "Show Easypaisa",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_jazzcash",
+      "label": "Show JazzCash",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom tagline",
+      "default": "Discover More. Shop Smarter. Live Better."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust",
+      "name": "Trust card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "truck",
+          "options": [
+            {"value": "truck", "label": "Delivery"},
+            {"value": "shield", "label": "Security"},
+            {"value": "quality", "label": "Quality"},
+            {"value": "support", "label": "Support"}
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Customer Support"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Here to help you"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "Footer menu",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu heading",
+          "default": "Quick Links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KUWAYT Premium Footer",
+      "blocks": [
+        {
+          "type": "trust",
+          "settings": {
+            "icon": "truck",
+            "title": "Delivery",
+            "subtitle": "Shop from home"
+          }
+        },
+        {
+          "type": "trust",
+          "settings": {
+            "icon": "shield",
+            "title": "Secure Shopping",
+            "subtitle": "Shop with confidence"
+          }
+        },
+        {
+          "type": "trust",
+          "settings": {
+            "icon": "quality",
+            "title": "Quality Products",
+            "subtitle": "Discover our collection"
+          }
+        },
+        {
+          "type": "trust",
+          "settings": {
+            "icon": "support",
+            "title": "Customer Support",
+            "subtitle": "Here to help you"
+          }
+        },
+        {
+          "type": "menu",
+          "settings": {
+            "title": "Customer Care"
+          }
+        },
+        {
+          "type": "menu",
+          "settings": {
+            "title": "Explore KUWAYT"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
