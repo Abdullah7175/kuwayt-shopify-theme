@@ -87,8 +87,8 @@
   {% if section.settings.bottom_banner != blank %}
 <a href="{{ section.settings.bottom_banner_link | default: routes.all_products_collection_url }}">
         {{ section.settings.bottom_banner | image_url: width: 1800 | image_tag }}
-    </a>
     <span class="kuwayt-banner-btn">Shop Now</span>
+</a>
   {% endif %}
 </div>
 
