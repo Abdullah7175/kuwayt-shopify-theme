@@ -2009,3 +2009,90 @@ main[data-template="index"]
   }
 
 }
+/* KUWAYT Mobile Banner Correction */
+
+@media screen and (max-width: 749px) {
+
+  .kuwayt-hero-section .kuwayt-hero__viewport,
+  .kuwayt-hero-section .kuwayt-hero__slide {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 3 / 1 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__media {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-hero__button {
+    position: absolute !important;
+    left: auto !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    padding: 7px 12px !important;
+    font-size: 10px !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners {
+    display: flex !important;
+    justify-content: center !important;
+    height: auto !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners > a {
+    display: block !important;
+    width: 55% !important;
+    max-width: 220px !important;
+    flex: 0 0 55% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners > a:not(:has(img)) {
+    display: none !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-side-banners img,
+  .kuwayt-hero-section .kuwayt-bottom-banner img {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner,
+  .kuwayt-hero-section .kuwayt-bottom-banner > a {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    padding: 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner {
+    margin: 10px 0 !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-banner-btn {
+    display: none !important;
+  }
+
+}
