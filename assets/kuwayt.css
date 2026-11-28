@@ -2816,3 +2816,82 @@ button[type="submit"]::before {
     display: none;
   }
 }
+/* KUWAYT VVIP HEADER FINAL FINISHING */
+
+#header-group form:has(input[type="search"]) {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#header-group [class*="search"]:has(> form:has(input[type="search"])) {
+  background: transparent !important;
+  border-radius: 50px !important;
+}
+
+#header-group input[type="search"] {
+  background: #ffffff !important;
+  border-radius: 50px !important;
+  color: #002E35 !important;
+  box-shadow: none !important;
+}
+
+#header-group form:has(input[type="search"]) button[type="submit"] {
+  background: linear-gradient(
+    135deg, #FFE875, #FFD126, #FFBC00
+  ) !important;
+  border-radius: 50px !important;
+  color: #002E35 !important;
+}
+
+/* Matching account and cart icons */
+
+#header-group :is(
+  .account-button,
+  .header-actions__action,
+  .header-actions > a,
+  .header-actions > button
+) {
+  background: rgba(255,255,255,.08) !important;
+  border-radius: 50% !important;
+  color: #FFD126 !important;
+  box-shadow: inset 0 0 0 1px rgba(255,209,38,.35);
+  transition: transform .3s ease,
+              box-shadow .3s ease;
+}
+
+/* Premium hover animation */
+
+@media (hover: hover) and (pointer: fine) {
+  #header-group :is(
+    .account-button,
+    .header-actions__action,
+    .header-actions > a,
+    .header-actions > button
+  ):hover {
+    transform: translateY(-2px) scale(1.08);
+    box-shadow: 0 5px 18px rgba(255,209,38,.25);
+  }
+}
+
+/* Mobile finishing */
+
+@media (max-width: 749px) {
+  #header-group input[type="search"] {
+    font-size: 16px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #header-group :is(
+    .account-button,
+    .header-actions__action,
+    .header-actions > a,
+    .header-actions > button
+  ) {
+    transition: none !important;
+    transform: none !important;
+  }
+}
