@@ -1,4 +1,6 @@
-<kuwayt-hero
+<div class="kuwayt-home-banner">
+  <div class="kuwayt-banner-grid">
+    <kuwayt-hero
   class="kuwayt-hero"
   {% if section.settings.autoplay and section.blocks.size > 1 %}
     autoplay="{{ section.settings.speed }}"
@@ -63,7 +65,32 @@
     </div>
   {% endif %}
 </kuwayt-hero>
+<div class="kuwayt-side-banners">
 
+  <a href="{{ routes.all_products_collection_url }}">
+    {% if section.settings.side_banner_1 != blank %}
+      {{ section.settings.side_banner_1 | image_url: width: 800 | image_tag }}
+    {% endif %}
+  </a>
+
+  <a href="{{ routes.all_products_collection_url }}">
+    {% if section.settings.side_banner_2 != blank %}
+      {{ section.settings.side_banner_2 | image_url: width: 800 | image_tag }}
+    {% endif %}
+  </a>
+
+</div>
+</div>
+
+<div class="kuwayt-bottom-banner">
+  {% if section.settings.bottom_banner != blank %}
+    <a href="{{ routes.all_products_collection_url }}">
+      {{ section.settings.bottom_banner | image_url: width: 1800 | image_tag }}
+    </a>
+  {% endif %}
+</div>
+
+</div>
 {% javascript %}
   if (!customElements.get('kuwayt-hero')) {
     class KuwaytHero extends HTMLElement {
@@ -112,7 +139,21 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [
+  "settings": [{
+  "type": "image_picker",
+  "id": "side_banner_1",
+  "label": "Right side banner 1"
+},
+{
+  "type": "image_picker",
+  "id": "side_banner_2",
+  "label": "Right side banner 2"
+},
+{
+  "type": "image_picker",
+  "id": "bottom_banner",
+  "label": "Bottom wide banner"
+},
     {
       "type": "checkbox",
       "id": "autoplay",

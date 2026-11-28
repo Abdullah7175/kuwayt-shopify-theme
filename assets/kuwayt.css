@@ -984,3 +984,98 @@ body .kuwayt-newsletter__panel {
     min-height: 0 !important;
   }
 }
+/* KUWAYT Daraz Style Homepage */
+
+.kuwayt-home-banner {
+  width: calc(100% - 32px);
+  max-width: 1440px;
+  margin: 12px auto;
+}
+
+.kuwayt-banner-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.kuwayt-banner-grid .kuwayt-hero {
+  display: block;
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.kuwayt-banner-grid .kuwayt-hero__viewport {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 2.85 / 1;
+}
+
+.kuwayt-side-banners {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.kuwayt-side-banners a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.kuwayt-side-banners img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kuwayt-bottom-banner {
+  margin-top: 16px;
+}
+
+.kuwayt-bottom-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 749px) {
+  .kuwayt-home-banner {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+
+  .kuwayt-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .kuwayt-banner-grid .kuwayt-hero__viewport {
+    aspect-ratio: 2.5 / 1;
+  }
+
+  .kuwayt-side-banners {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 8px;
+  }
+
+  .kuwayt-side-banners a {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .kuwayt-bottom-banner {
+    margin-top: 10px;
+  }
+}
