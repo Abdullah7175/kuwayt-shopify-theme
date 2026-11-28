@@ -1230,6 +1230,24 @@ transition: none !important;
   opacity: 1 !important;
 }
 .kuwayt-side-banners .kuwayt-banner-btn,
-.kuwayt-bottom-banner .kuwayt-banner-btn {
-  display: none !important;
+.kuwayt-bottom-banner .kuwayt-banner-btn,
+.kuwayt-side-banners a:hover .kuwayt-banner-btn,
+.kuwayt-bottom-banner a:hover .kuwayt-banner-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%) !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 12px !important;
+  transition: none !important;
+  background: linear-gradient(135deg, #FFE66D, #FFBC00) !important;
+  color: #111111 !important;
+  white-space: nowrap;
+}
+
+.kuwayt-hero-section .button,
+.kuwayt-hero-section .button:hover {
+  transform: none !important;
+  transition: none !important;
 }
