@@ -2911,7 +2911,15 @@ button[type="submit"]::before {
 }
 
 #header-group .header__row {
-  background: transparent !important;
+  background: linear-gradient(
+    110deg,
+    #00252C 0%,
+    #004952 50%,
+    #00252C 100%
+  ) !important;
+
+  border-color: transparent !important;
+} background: transparent !important;
 }
 
 /* Transparent luxury logo */
