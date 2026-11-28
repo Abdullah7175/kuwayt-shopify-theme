@@ -1251,3 +1251,12 @@ transition: none !important;
   transform: none !important;
   transition: none !important;
 }
+.kuwayt-bottom-banner .kuwayt-banner-btn,
+.kuwayt-bottom-banner a:hover .kuwayt-banner-btn {
+  left: 90% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  transition: none !important;
+}
