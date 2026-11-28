@@ -2186,7 +2186,7 @@ main[data-template="index"]
 @media screen and (max-width: 749px) {
 
   .kuwayt-hero-section .kuwayt-bottom-banner {
-    margin: 0 !important;
+margin: 10px 0 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
     border-radius: 8px !important;
