@@ -1467,3 +1467,24 @@ main[data-template="index"] [data-testid="product-list"] product-price .price {
     font-weight: 700 !important;
   }
 }
+/* KUWAYT Premium New Badge */
+
+.product-badges__badge.kuwayt-badge-new {
+  background: linear-gradient(135deg, #009eaa, #006b75) !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  padding: 5px 10px !important;
+  line-height: 1.2 !important;
+  box-shadow: 0 3px 8px rgba(0, 126, 136, 0.20);
+}
+
+@media screen and (max-width: 749px) {
+  .product-badges__badge.kuwayt-badge-new {
+    font-size: 9px !important;
+    padding: 4px 7px !important;
+    border-radius: 5px !important;
+  }
+}
