@@ -3058,3 +3058,26 @@ button[type="submit"] {
     transform: none !important;
   }
 }
+/* KUWAYT CLEAN TRANSPARENT HEADER LOGO */
+
+#header-group .header-logo,
+#header-group .header-logo span,
+#header-group .header-logo__image,
+#header-group .header-logo__image--brand {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#header-group .header-logo__image {
+  border-radius: 0 !important;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #header-group .header-logo:hover img {
+    transform: scale(1.05);
+  }
+}
