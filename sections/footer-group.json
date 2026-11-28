@@ -69,8 +69,13 @@
         "menu_PGTjne",
         "menu_CkgVCK"
       ],
+      "custom_css": [
+        "img[src*=\"logo\" i] {width: 300px !important; max-width: 100% !important; height: auto !important; display: block; margin: 0 0 12px 0 !important; transform: translateX(-15%);}",
+        "@media (max-width: 749px) {img[src*=\"logo\" i] {width: 240px !important; }}"
+      ],
       "name": "KUWAYT Premium Footer",
       "settings": {
+        "logo": "shopify://shop_images/KUWAYT_One-Stop_Footer_Logo.png",
         "bg_color": "#002e35",
         "accent_color": "#ffd126",
         "text_color": "#e0eeee",
