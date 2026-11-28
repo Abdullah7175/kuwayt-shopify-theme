@@ -2919,10 +2919,7 @@ button[type="submit"]::before {
   ) !important;
 
   border-color: transparent !important;
-} background: transparent !important;
 }
-
-/* Transparent luxury logo */
 
 #header-group .header-logo,
 #header-group .header-logo img {
