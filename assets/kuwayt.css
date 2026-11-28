@@ -2181,3 +2181,29 @@ main[data-template="index"]
   }
 
 }
+/* KUWAYT Mobile Banner Final Crop */
+
+@media screen and (max-width: 749px) {
+
+  .kuwayt-hero-section .kuwayt-bottom-banner {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner > a {
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 8.3 / 1 !important;
+    overflow: hidden !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-bottom-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+}
