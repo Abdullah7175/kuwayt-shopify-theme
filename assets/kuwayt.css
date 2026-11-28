@@ -1125,3 +1125,32 @@ body .kuwayt-newsletter__panel {
   border-radius: 12px;
   display: block;
 }
+.kuwayt-hero__media::before,
+.kuwayt-hero__media::after,
+.kuwayt-hero__slide::before,
+.kuwayt-hero__slide::after {
+  background: transparent !important;
+}
+
+.kuwayt-hero__media img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+.kuwayt-bottom-banner {
+  width: 94%;
+  margin: 18px auto !important;
+  padding: 0 !important;
+}
+
+.kuwayt-bottom-banner a {
+  display: block;
+}
+
+.kuwayt-bottom-banner img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 8 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+}
