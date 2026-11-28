@@ -1218,8 +1218,7 @@ body .kuwayt-newsletter__panel {
   font-weight: 700 !important;
   text-transform: uppercase;
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease;
-}
+transition: none !important;}
 
 .kuwayt-hero-section .button:hover,
 .kuwayt-banner-btn:hover,
