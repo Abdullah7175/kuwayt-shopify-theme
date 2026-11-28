@@ -2207,3 +2207,25 @@ margin: 10px 0 0 !important;
   }
 
 }
+/* KUWAYT Premium Centered Homepage */
+
+@media screen and (min-width: 750px) {
+
+  #MainContent[data-template="index"]
+  > .shopify-section:not(.kuwayt-hero-section) {
+    width: calc(100% - 48px) !important;
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .kuwayt-hero-section .kuwayt-home-banner {
+    width: calc(100% - 48px) !important;
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+}
