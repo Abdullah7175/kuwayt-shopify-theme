@@ -58,6 +58,48 @@
         "image_alt": "KUWAYT, one stop for all"
       }
     },
+    "kuwayt_trust": {
+      "type": "kuwayt-trust",
+      "blocks": {
+        "highlight_catalog": {
+          "type": "highlight",
+          "settings": {
+            "title": "Delivery",
+            "text": "Delivery choices are shown at checkout."
+          }
+        },
+        "highlight_search": {
+          "type": "highlight",
+          "settings": {
+            "title": "Secure payment",
+            "text": "Payments run through Shopify checkout."
+          }
+        },
+        "highlight_prices": {
+          "type": "highlight",
+          "settings": {
+            "title": "Easy returns",
+            "text": "Returns follow the refund policy published for this store."
+          }
+        },
+        "highlight_checkout": {
+          "type": "highlight",
+          "settings": {
+            "title": "Support",
+            "text": "Send a message from the contact page."
+          }
+        }
+      },
+      "block_order": [
+        "highlight_catalog",
+        "highlight_search",
+        "highlight_prices",
+        "highlight_checkout"
+      ],
+      "settings": {
+        "heading": "Why shop with KUWAYT"
+      }
+    },
     "shop_by_department": {
       "type": "kuwayt-shop-by",
       "blocks": {
@@ -462,48 +504,6 @@
       "disabled": true,
       "settings": {
         "heading": "Shop by need"
-      }
-    },
-    "kuwayt_trust": {
-      "type": "kuwayt-trust",
-      "blocks": {
-        "highlight_catalog": {
-          "type": "highlight",
-          "settings": {
-            "title": "Delivery",
-            "text": "Delivery choices are shown at checkout."
-          }
-        },
-        "highlight_search": {
-          "type": "highlight",
-          "settings": {
-            "title": "Secure payment",
-            "text": "Payments run through Shopify checkout."
-          }
-        },
-        "highlight_prices": {
-          "type": "highlight",
-          "settings": {
-            "title": "Easy returns",
-            "text": "Returns follow the refund policy published for this store."
-          }
-        },
-        "highlight_checkout": {
-          "type": "highlight",
-          "settings": {
-            "title": "Support",
-            "text": "Send a message from the contact page."
-          }
-        }
-      },
-      "block_order": [
-        "highlight_catalog",
-        "highlight_search",
-        "highlight_prices",
-        "highlight_checkout"
-      ],
-      "settings": {
-        "heading": "Why shop with KUWAYT"
       }
     },
     "kuwayt_featured_departments": {
@@ -1835,11 +1835,11 @@
   },
   "order": [
     "kuwayt_hero",
+    "kuwayt_trust",
     "shop_by_department",
     "product_list_UUxXMX",
     "shop_by_price",
     "shop_by_need",
-    "kuwayt_trust",
     "kuwayt_featured_departments",
     "kuwayt_categories",
     "featured_products",
