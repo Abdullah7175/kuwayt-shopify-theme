@@ -2229,3 +2229,48 @@ margin: 10px 0 0 !important;
   }
 
 }
+/* KUWAYT Premium Mobile Product Slider */
+
+@media screen and (max-width: 749px) {
+
+  #MainContent [id$="__product_list_UUxXMX"]
+  .resource-list.hidden--mobile {
+    display: none !important;
+  }
+
+  #MainContent [id$="__product_list_UUxXMX"]
+  .resource-list.hidden--desktop {
+    display: block !important;
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-inline: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  #MainContent [id$="__product_list_UUxXMX"]
+  slideshow-component.resource-list__carousel {
+    width: 100% !important;
+    min-width: 0 !important;
+    --gutter-slide-width: 0px !important;
+  }
+
+  #MainContent [id$="__product_list_UUxXMX"]
+  .resource-list__carousel > slideshow-container
+  > slideshow-slides {
+    display: flex !important;
+    width: 100% !important;
+    gap: 10px !important;
+    padding-inline: 0 !important;
+    scroll-padding-inline: 0 !important;
+  }
+
+  #MainContent [id$="__product_list_UUxXMX"]
+  .resource-list__slide {
+    width: calc((100% - 10px) / 2) !important;
+    flex: 0 0 calc((100% - 10px) / 2) !important;
+    min-width: 0 !important;
+  }
+
+}
