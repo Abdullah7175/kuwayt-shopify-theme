@@ -44,7 +44,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "bottom_banner": "shopify://shop_images/Kuwayt_New_Year_Sale_Banner.png",
+        "side_banner_1": "shopify://shop_images/Kuwayt_Glow-Up_Beauty_Essentials.png",
+        "bottom_banner": "shopify://shop_images/KUWAYT_Blessed_Friday_Sale_Banner.png",
         "autoplay": true,
         "speed": 6,
         "eyebrow": "One stop for all",
