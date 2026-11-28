@@ -1101,3 +1101,27 @@ body .kuwayt-newsletter__panel {
     border-radius: 8px;
   }
 }
+.kuwayt-side-banners {
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+  height: 100%;
+}
+
+.kuwayt-side-banners a:empty,
+.kuwayt-side-banners a:not(:has(img)) {
+  display: none !important;
+}
+
+.kuwayt-side-banners a {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+
+.kuwayt-side-banners img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  border-radius: 12px;
+  display: block;
+}
