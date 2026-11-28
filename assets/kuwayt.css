@@ -1079,3 +1079,25 @@ body .kuwayt-newsletter__panel {
     margin-top: 10px;
   }
 }
+.kuwayt-bottom-banner {
+  width: 92%;
+  margin: 20px auto;
+}
+
+.kuwayt-bottom-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+@media (max-width: 749px) {
+  .kuwayt-bottom-banner {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .kuwayt-bottom-banner img {
+    border-radius: 8px;
+  }
+}
