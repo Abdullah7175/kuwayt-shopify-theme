@@ -1452,3 +1452,18 @@ main[data-template="index"] [data-testid="product-list"] .product-card__content.
     border-radius: 10px !important;
   }
 }
+/* KUWAYT Premium Product Price */
+
+main[data-template="index"] [data-testid="product-list"] product-price .price {
+  color: #007E88 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.3px;
+}
+
+@media screen and (max-width: 749px) {
+  main[data-template="index"] [data-testid="product-list"] product-price .price {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+  }
+}
